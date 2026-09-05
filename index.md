@@ -100,6 +100,7 @@ tutan şeydir:
 | **Hakemi adlandır** | "Model" bir ölçüm aracı değildir. Hakem yazarın kendisiyse iddia tavanlıdır. |
 | **Kuralı taşıyan şey betiktir** | Yalnızca düzyazıyla korunan kural, host'un düzyazısıyla pazarlık edilebilir. |
 | **Skill başkasının kurulumunda koşar** | Sessizce uyma; hangi talimatın hangi adımı devre dışı bıraktığını söyle. |
+| **Kaçan, sınıfa dönüşür** | Dışarıdan gelen tek sinyal — kullanıcının bulduğu, üretimde patlayan, batch'in dışından gelen. Sayılmakla kalmaz: onu yakalaması gereken kontrol adlandırılır, yoksa artık var olan kontrol yazılır. Dördünde de bir rampa bunu zorunlu kılar. |
 
 ---
 
@@ -184,6 +185,8 @@ every threshold names its arbiter; the rule that must survive an unknown host
 goes in a script, not in a paragraph; and each skill states the conflict when
 a host's instructions disable part of its method, instead of complying
 quietly.
+
+One more, and it is the only one that comes from outside the method: **an escape becomes a class.** When something gets past a tool — a user hits it, it breaks in production, the idea arrives from outside the batch — each tool has a ramp that refuses to close on the fix alone. It asks which check should have caught it, and if none exists, the check that now does gets written. A count of escapes is not a feedback loop; naming the class is.
 
 ### Install
 
