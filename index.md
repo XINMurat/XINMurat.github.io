@@ -101,6 +101,21 @@ tutan şeydir:
 | **Kuralı taşıyan şey betiktir** | Yalnızca düzyazıyla korunan kural, host'un düzyazısıyla pazarlık edilebilir. |
 | **Skill başkasının kurulumunda koşar** | Sessizce uyma; hangi talimatın hangi adımı devre dışı bıraktığını söyle. |
 | **Kaçan, sınıfa dönüşür** | Dışarıdan gelen tek sinyal — kullanıcının bulduğu, üretimde patlayan, batch'in dışından gelen. Sayılmakla kalmaz: onu yakalaması gereken kontrol adlandırılır, yoksa artık var olan kontrol yazılır. Dördünde de bir rampa bunu zorunlu kılar. |
+| **Parçalayan, geri birleştirir** | Denetim de plan da işi parçalara ayırarak ilerler — ve yalnızca **iki parça aynı anda etkinken** var olan kusur tam o anda yok olur. Üçü de sonda bir birleştirme pası koşar: her özellik/akış için dokunabildiği mevcut garantiler, ve her çift için tek soru — *bu garanti hâlâ geçerli mi?* En kırılgan ikisi: bir **yokluktan** hesaplanan sinyaller ve tek tek çağrı yerinde uygulanan garantiler. Yeşil test paketi burada karşı kanıt değildir. |
+
+---
+
+## Şu anki sürümler
+
+| Skill | Sürüm | Bu sürümde ne var |
+|---|---|---|
+| [İskele](https://github.com/XINMurat/Iskele/releases/latest) | **v1.2.0** | Faz-kapanış çizelgesi artık takip dosyasının içinde · ADR defteri ve zincir denetleyicisi · `AGENTS.md` · kurtarma rampaları `RR-00`…`RR-13` |
+| [Mizan](https://github.com/XINMurat/Mizan/releases/latest) | **v2.5.0** | `probes` bloğu ve R19–R21: alan probu, bileşim pası, kaçak→sınıf döngüsü · R17 (duran girdiye son tarih) · R18 (önkayıt ne kilitlediğini söyler) · registry şeması 1.8 |
+| [Kıyas](https://github.com/XINMurat/Kiyas/releases/latest) | **v1.2.0** | G12: parti, hangi koşullarda çekildiğini kaydeder · rampalar ve RR-13 — üretimin runtime'ı olmadığı için dışarıdan gelen sinyalin kendi satırı |
+| [ux-mizan](https://github.com/XINMurat/ux-mizan/releases/latest) | **v0.5** | U13: yalnızca iki akış aynı anda etkinken var olan kusur artık kaydedilebiliyor · U11/U12 · kayıp/ölü tık tanımları · rampalar ve R-13 |
+
+Bu tablo bir anlık görüntüdür; bağlayıcı olan her deponun **Releases**
+sayfasıdır — yukarıdaki bağlantılar oraya, en son sürüme gider.
 
 ---
 
@@ -186,7 +201,27 @@ goes in a script, not in a paragraph; and each skill states the conflict when
 a host's instructions disable part of its method, instead of complying
 quietly.
 
+And one shared move rather than a rule: **what takes things apart puts them
+back.** An audit atomizes claims, a plan atomizes tasks, a UX walkthrough
+takes one flow at a time — and a defect that exists only while **two** of them
+are active at once is destroyed by that very act. Mizan, İskele and ux-mizan
+each run a re-assembly pass at the end: for every feature or flow, the
+existing guarantees it can reach, and one question per pair — does that
+guarantee still hold while both are live? The two fragile classes are signals
+computed from an **absence** and guarantees enforced call site by call site. A
+green test suite is not counter-evidence: tests are written per part.
+
 One more, and it is the only one that comes from outside the method: **an escape becomes a class.** When something gets past a tool — a user hits it, it breaks in production, the idea arrives from outside the batch — each tool has a ramp that refuses to close on the fix alone. It asks which check should have caught it, and if none exists, the check that now does gets written. A count of escapes is not a feedback loop; naming the class is.
+
+### Current releases
+
+[İskele **v1.2.0**](https://github.com/XINMurat/Iskele/releases/latest) ·
+[Mizan **v2.5.0**](https://github.com/XINMurat/Mizan/releases/latest) ·
+[Kıyas **v1.2.0**](https://github.com/XINMurat/Kiyas/releases/latest) ·
+[ux-mizan **v0.5**](https://github.com/XINMurat/ux-mizan/releases/latest)
+
+A snapshot; each repository's Releases page is what binds, and the links above
+go there.
 
 ### Install
 
