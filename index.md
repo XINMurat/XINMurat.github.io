@@ -104,64 +104,76 @@ lang: en
     <p class="sub">The tools hand each other files, not prose.</p>
 
     <figure class="chain">
-      <svg viewBox="0 0 780 250" role="img" aria-label="An unstructured input — a document, a chat, an article, an idea — enters at Mizan, which audits it; Mizan hands refuted patterns and gaps to Kıyas; Kıyas hands surviving seeds to İskele; İskele's backlog returns to Mizan as preregistered entries; and ux-mizan hands measured findings into that backlog.">
+      <svg viewBox="0 0 780 300" role="img" aria-label="An unstructured input — a document, a chat, an article, an idea — enters at Mizan. Mizan and Kıyas exchange in both directions: gaps and refuted patterns go to Kıyas, seeds come back as preregistered hypotheses. That pair can run on its own. When something survives and is worth building, İskele takes it, and İskele's acceptance criteria return to Mizan as entries. ux-mizan hands measured findings both into the backlog and back into the audit.">
         <defs>
           <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
             <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
           </marker>
         </defs>
         <g fill="none" stroke="currentColor" stroke-width="1.4" opacity=".55" marker-end="url(#ar)">
-          <path d="M162,66 H192"/>
-          <path d="M350,66 H380"/>
-          <path d="M538,66 H568"/>
-          <path d="M647,98 V150 H271 V98"/>
-          <path d="M538,204 H700 V98"/>
+          <path d="M162,58 H192"/>
+          <path d="M350,46 H426"/>
+          <path d="M426,74 H350"/>
+          <path d="M388,90 V176"/>
+          <path d="M313,208 H240 V90"/>
+          <path d="M556,208 H467"/>
+          <path d="M635,176 V140 H505 V90"/>
         </g>
         <g>
-          <rect x="8" y="38" width="154" height="56" rx="10" fill="none" stroke="currentColor" opacity=".3" stroke-dasharray="4 4"/>
-          <text class="chain-txt" x="85" y="60" text-anchor="middle">a document, a chat,</text>
-          <text class="chain-txt" x="85" y="76" text-anchor="middle">an article, an idea</text>
-          <rect x="192" y="38" width="158" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
-          <text class="chain-node" x="271" y="71" text-anchor="middle">Mizan</text>
-          <rect x="380" y="38" width="158" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
-          <text class="chain-node" x="459" y="71" text-anchor="middle">Kıyas</text>
-          <rect x="568" y="38" width="158" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
-          <text class="chain-node" x="647" y="71" text-anchor="middle">İskele</text>
-          <rect x="380" y="176" width="158" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
-          <text class="chain-node" x="459" y="207" text-anchor="middle">ux-mizan</text>
+          <rect x="8" y="30" width="154" height="56" rx="10" fill="none" stroke="currentColor" opacity=".3" stroke-dasharray="4 4"/>
+          <text class="chain-txt" x="85" y="52" text-anchor="middle">a document, a chat,</text>
+          <text class="chain-txt" x="85" y="68" text-anchor="middle">an article, an idea</text>
+          <rect x="192" y="30" width="158" height="60" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
+          <text class="chain-node" x="271" y="66" text-anchor="middle">Mizan</text>
+          <rect x="426" y="30" width="150" height="60" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
+          <text class="chain-node" x="501" y="66" text-anchor="middle">Kıyas</text>
+          <rect x="313" y="176" width="154" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
+          <text class="chain-node" x="390" y="209" text-anchor="middle">İskele</text>
+          <rect x="556" y="176" width="154" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
+          <text class="chain-node" x="633" y="209" text-anchor="middle">ux-mizan</text>
         </g>
         <g class="chain-txt" text-anchor="middle">
-          <text x="177" y="30">audit</text>
-          <text x="365" y="30">refuted</text>
-          <text x="553" y="30">seeds</text>
-          <text x="430" y="167">backlog</text>
-          <text x="640" y="196">findings</text>
+          <text x="388" y="24">gaps · refuted</text>
+          <text x="398" y="112" text-anchor="start">seeds → preregistered</text>
+          <text x="398" y="152" text-anchor="start">worth building</text>
+          <text x="200" y="152" text-anchor="start">criteria</text>
+          <text x="512" y="200">tasks</text>
+          <text x="560" y="134">findings</text>
         </g>
       </svg>
-      <figcaption>The entry is the loose end on the left: something you already
-      have. Everything after it is the loop — and the loop only closes because
-      İskele's criteria go back in as Mizan entries.</figcaption>
+      <figcaption>Two loops, not one ring. Mizan and Kıyas can go round on their
+      own for as long as the thinking needs — İskele is entered when something
+      survives and is worth building, not on the way past.</figcaption>
     </figure>
 
     <ul class="plain">
-      <li><strong>You → Mizan:</strong> the entry point, and the one arrow that
-      starts outside the system. Something you already have — an AI
-      conversation, an article, an old note, a rough idea — gets atomized into
-      claims and tiered. What survives is <code>[H]</code>; what does not is
-      recorded rather than deleted.</li>
-      <li><strong>Mizan → Kıyas:</strong> refuted entries become negative
-      constraints, and the gap map becomes the brief. Kıyas consults them before
-      proposing a relative of something already refuted — which is how it
-      produces what the audit could not see rather than more of what it
-      already said.</li>
-      <li><strong>Kıyas → İskele:</strong> surviving seeds become backlog tasks
-      (<code>kiyas_to_backlog.py</code>) — a seed is not a plan.</li>
+      <li><strong>You → Mizan:</strong> the entry, and the one arrow that starts
+      outside the system. Something you already have — an AI conversation, an
+      article, an old note, a rough idea — gets atomized into claims and tiered.
+      What survives is <code>[H]</code>; what does not is recorded rather than
+      deleted.</li>
+      <li><strong>Mizan ⇄ Kıyas — the inner loop.</strong> The audit's gap map
+      and its refuted entries become Kıyas's brief and its negative constraints;
+      Kıyas's surviving seeds come back as preregistered entries, already
+      carrying the arbiter the registry will demand
+      (<code>mizan_export_refuted.py</code> one way, the registry-entry shape
+      the other). <strong>This pair can go round on its own, many times, with no
+      project in sight</strong> — which is what happens when the domain shifts,
+      when a case turns out to be special, or when the honest answer is still
+      being looked for.</li>
+      <li><strong>→ İskele, when it is worth building.</strong> Surviving seeds
+      become backlog tasks (<code>kiyas_to_backlog.py</code>) — a seed is not a
+      plan, and not every seed earns a project. İskele is a branch off the inner
+      loop, not a station on the way.</li>
       <li><strong>İskele → Mizan:</strong> acceptance criteria become
       preregistration entries (<code>iskele_to_registry.py</code>); every
-      sentence claiming "verified" enters the counter-example sweep. This is
-      the arrow that closes the loop.</li>
-      <li><strong>ux-mizan → İskele:</strong> measured UX findings re-enter the
-      backlog as tasks carrying acceptance criteria of their own.</li>
+      sentence claiming "verified" enters the counter-example sweep. This is the
+      arrow that closes the outer loop.</li>
+      <li><strong>ux-mizan → both.</strong> A measured finding is two things at
+      once: a task for the backlog, and a claim about the application. The first
+      goes to İskele with its own acceptance criteria; the second re-enters the
+      inner loop — as an entry for Mizan when it needs tiering, or as the brief
+      for Kıyas when the question is <em>why</em> users do that.</li>
     </ul>
   </div>
 </section>
@@ -411,61 +423,73 @@ lang: en
     <p class="sub">Araçlar birbirine dosya devreder, düzyazı değil.</p>
 
     <figure class="chain">
-      <svg viewBox="0 0 780 250" role="img" aria-label="Yapılandırılmamış bir girdi — bir doküman, bir sohbet, bir makale, bir fikir — Mizan'a girer ve denetlenir; Mizan çürütülenleri ve boşlukları Kıyas'a verir; Kıyas sağ kalan tohumları İskele'ye verir; İskele'nin backlog'u önkayıtlı girdiler olarak Mizan'a döner; ux-mizan ölçülmüş bulguları o backlog'a verir.">
+      <svg viewBox="0 0 780 300" role="img" aria-label="Yapılandırılmamış bir girdi — bir doküman, sohbet, makale, ham fikir — Mizan'a girer. Mizan ile Kıyas iki yönde alışveriş eder: boşluklar ve çürütülenler Kıyas'a gider, tohumlar önkayıtlı hipotez olarak geri döner. Bu çift kendi başına dönebilir. Sağ kalan bir şey inşa edilmeye değdiğinde İskele devreye girer ve kabul kriterleri Mizan'a girdi olarak döner. ux-mizan ölçülmüş bulguları hem backlog'a hem denetime verir.">
         <defs>
           <marker id="ar-tr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
             <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
           </marker>
         </defs>
         <g fill="none" stroke="currentColor" stroke-width="1.4" opacity=".55" marker-end="url(#ar-tr)">
-          <path d="M162,66 H192"/>
-          <path d="M350,66 H380"/>
-          <path d="M538,66 H568"/>
-          <path d="M647,98 V150 H271 V98"/>
-          <path d="M538,204 H700 V98"/>
+          <path d="M162,58 H192"/>
+          <path d="M350,46 H426"/>
+          <path d="M426,74 H350"/>
+          <path d="M388,90 V176"/>
+          <path d="M313,208 H240 V90"/>
+          <path d="M556,208 H467"/>
+          <path d="M635,176 V140 H505 V90"/>
         </g>
         <g>
-          <rect x="8" y="38" width="154" height="56" rx="10" fill="none" stroke="currentColor" opacity=".3" stroke-dasharray="4 4"/>
-          <text class="chain-txt" x="85" y="60" text-anchor="middle">bir doküman, sohbet,</text>
-          <text class="chain-txt" x="85" y="76" text-anchor="middle">makale, ham fikir</text>
-          <rect x="192" y="38" width="158" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
-          <text class="chain-node" x="271" y="71" text-anchor="middle">Mizan</text>
-          <rect x="380" y="38" width="158" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
-          <text class="chain-node" x="459" y="71" text-anchor="middle">Kıyas</text>
-          <rect x="568" y="38" width="158" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
-          <text class="chain-node" x="647" y="71" text-anchor="middle">İskele</text>
-          <rect x="380" y="176" width="158" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
-          <text class="chain-node" x="459" y="207" text-anchor="middle">ux-mizan</text>
+          <rect x="8" y="30" width="154" height="56" rx="10" fill="none" stroke="currentColor" opacity=".3" stroke-dasharray="4 4"/>
+          <text class="chain-txt" x="85" y="52" text-anchor="middle">bir doküman, sohbet,</text>
+          <text class="chain-txt" x="85" y="68" text-anchor="middle">makale, ham fikir</text>
+          <rect x="192" y="30" width="158" height="60" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
+          <text class="chain-node" x="271" y="66" text-anchor="middle">Mizan</text>
+          <rect x="426" y="30" width="150" height="60" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
+          <text class="chain-node" x="501" y="66" text-anchor="middle">Kıyas</text>
+          <rect x="313" y="176" width="154" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
+          <text class="chain-node" x="390" y="209" text-anchor="middle">İskele</text>
+          <rect x="556" y="176" width="154" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
+          <text class="chain-node" x="633" y="209" text-anchor="middle">ux-mizan</text>
         </g>
         <g class="chain-txt" text-anchor="middle">
-          <text x="177" y="30">denetle</text>
-          <text x="365" y="30">çürütülenler</text>
-          <text x="553" y="30">tohumlar</text>
-          <text x="430" y="167">backlog</text>
-          <text x="640" y="196">bulgular</text>
+          <text x="388" y="24">boşluklar · çürütülenler</text>
+          <text x="398" y="112" text-anchor="start">tohumlar → önkayıt</text>
+          <text x="398" y="152" text-anchor="start">inşa etmeye değer</text>
+          <text x="200" y="152" text-anchor="start">kriterler</text>
+          <text x="512" y="200">görevler</text>
+          <text x="560" y="134">bulgular</text>
         </g>
       </svg>
-      <figcaption>Giriş, soldaki açık uç: elinizde zaten olan bir şey. Ondan
-      sonrası döngü — ve döngü ancak İskele'nin kriterleri Mizan girdisi olarak
-      geri girdiği için kapanıyor.</figcaption>
+      <figcaption>Tek halka değil, iki döngü. Mizan ile Kıyas, düşünme ne kadar
+      sürerse o kadar kendi aralarında dönebilir — İskele, sağ kalan bir şey inşa
+      edilmeye değdiğinde devreye girer; yol üstünde uğranan bir durak değil.</figcaption>
     </figure>
 
     <ul class="plain">
-      <li><strong>Siz → Mizan:</strong> giriş noktası, ve sistemin dışından
-      başlayan tek ok. Elinizde zaten olan bir şey — bir YZ sohbeti, bir makale,
-      eski bir not, ham bir fikir — iddialara ayrılır ve katmanlanır. Ayakta
-      kalan <code>[H]</code> olur; kalmayan silinmez, kaydedilir.</li>
-      <li><strong>Mizan → Kıyas:</strong> reddedilen kayıtlar negatif kısıt,
-      boşluk haritası ise brief olur. Kıyas, çürütülmüş bir şeyin akrabasını
-      önermeden önce oraya bakar — denetimin <em>göremediğini</em> üretmesinin
-      yolu bu; söylediğinin fazlasını değil.</li>
-      <li><strong>Kıyas → İskele:</strong> sağ kalan tohumlar backlog görevine
-      dönüşür (<code>kiyas_to_backlog.py</code>) — bir tohum plan değildir.</li>
+      <li><strong>Siz → Mizan:</strong> giriş, ve sistemin dışından başlayan tek
+      ok. Elinizde zaten olan bir şey — bir YZ sohbeti, bir makale, eski bir
+      not, ham bir fikir — iddialara ayrılır ve katmanlanır. Ayakta kalan
+      <code>[H]</code> olur; kalmayan silinmez, kaydedilir.</li>
+      <li><strong>Mizan ⇄ Kıyas — iç döngü.</strong> Denetimin boşluk haritası
+      ve reddedilen kayıtları Kıyas'ın brief'i ve negatif kısıtları olur;
+      Kıyas'ın sağ kalan tohumları, registry'nin isteyeceği hakemi zaten
+      taşıyarak önkayıt girdisi olarak geri döner
+      (<code>mizan_export_refuted.py</code> bir yöne, registry-girdi biçimi
+      diğerine). <strong>Bu çift, ortada hiçbir proje yokken kendi arasında
+      defalarca dönebilir</strong> — alan farklılaştığında, bir vaka özel
+      çıktığında, ya da dürüst cevap hâlâ aranırken olan tam budur.</li>
+      <li><strong>→ İskele, inşa etmeye değdiğinde.</strong> Sağ kalan tohumlar
+      backlog görevine dönüşür (<code>kiyas_to_backlog.py</code>) — bir tohum
+      plan değildir ve her tohum bir projeyi hak etmez. İskele, iç döngüden
+      çıkan bir <em>dal</em>dır; yol üstünde uğranan bir durak değil.</li>
       <li><strong>İskele → Mizan:</strong> kabul kriterleri önkayıt girdilerine
       dönüşür (<code>iskele_to_registry.py</code>); "doğrulandı" diyen her cümle
-      karşı-örnek taramasına girer. Döngüyü kapatan ok budur.</li>
-      <li><strong>ux-mizan → İskele:</strong> ölçülmüş UX bulguları, kendi kabul
-      kriterini taşıyan görevler olarak backlog'a geri girer.</li>
+      karşı-örnek taramasına girer. Dış döngüyü kapatan ok budur.</li>
+      <li><strong>ux-mizan → ikisine birden.</strong> Ölçülmüş bir bulgu aynı
+      anda iki şeydir: backlog için bir görev, ve uygulama hakkında bir iddia.
+      Birincisi kendi kabul kriteriyle İskele'ye gider; ikincisi iç döngüye
+      girer — katmanlanması gerekiyorsa Mizan'a girdi, soru <em>kullanıcılar
+      bunu neden yapıyor</em> ise Kıyas'a brief olarak.</li>
     </ul>
   </div>
 </section>
