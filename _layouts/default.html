@@ -9,6 +9,7 @@
 <meta property="og:description" content="{{ page.description | default: site.description }}">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
+<script>document.documentElement.className = 'js';</script>
 <style>
 :root{
   --bg:#fbfaf8; --bg-soft:#f3f1ec; --card:#fff; --ink:#1b1a17; --ink-soft:#55524b;
@@ -159,6 +160,11 @@ footer a{color:var(--ink-soft)}
 .tiers{font-family:var(--mono); font-size:.82rem}
 
 [hidden]{display:none !important}
+/* The second pane is hidden by CSS only when scripting is on, so a reader with
+   no JavaScript gets both languages in document order instead of one -- which
+   is the entire reason the two live in one file. The class comes off the moment
+   the toggle paints, after which `hidden` alone decides. */
+html.js .pane-init{display:none}
 .skip{position:absolute; left:-9999px}
 .skip:focus{left:1rem; top:1rem; background:var(--card); padding:.5rem .8rem;
   border:1px solid var(--line); border-radius:.4rem; z-index:30}
@@ -196,6 +202,8 @@ footer a{color:var(--ink-soft)}
   if (!panes.en || !panes.tr) return;
 
   function show(lang) {
+    panes.en.classList.remove('pane-init');
+    panes.tr.classList.remove('pane-init');
     panes.en.hidden = lang !== 'en';
     panes.tr.hidden = lang !== 'tr';
     document.documentElement.lang = lang;

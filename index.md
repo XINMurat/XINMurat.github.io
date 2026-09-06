@@ -307,7 +307,7 @@ lang: en
 
 </div>
 
-<div id="pane-tr" lang="tr" hidden>
+<div id="pane-tr" lang="tr" class="pane-init">
 
 <section class="hero">
   <div class="wrap">
