@@ -6,4 +6,7 @@ lang: en
 # would decide the typography and the dark mode for us, and this page has four
 # accents and two languages to keep in agreement -- cheaper to own outright than
 # to override.
-plugins: []
+#
+# No `plugins:` key either: setting one REPLACES the GitHub Pages default set
+# rather than adding to it, and those defaults are what make ordinary Markdown
+# behave the way every page here assumes.
