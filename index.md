@@ -102,6 +102,7 @@ tutan şeydir:
 | **Skill başkasının kurulumunda koşar** | Sessizce uyma; hangi talimatın hangi adımı devre dışı bıraktığını söyle. |
 | **Kaçan, sınıfa dönüşür** | Dışarıdan gelen tek sinyal — kullanıcının bulduğu, üretimde patlayan, batch'in dışından gelen. Sayılmakla kalmaz: onu yakalaması gereken kontrol adlandırılır, yoksa artık var olan kontrol yazılır. Dördünde de bir rampa bunu zorunlu kılar. |
 | **Bütçesi olan bir bağlam** | Bir skill, bağımlılığın bayt harcadığı gibi token harcar: kuran herkese, her soğuk başlangıçta. Dördünde de `tools/token_budget.py` üç katmanı ölçer — her oturumda bağlamda olan açıklama, gövde, ve talep üzerine okunanlar — ve **önkayıtlı tavanları** CI'da uygular. Tavanı yükseltmek gerekçeli bir commit'tir; sessizce büyümek seçeneklerden biri değildir. |
+| **Maliyet ölçülür, ROI iddia edilmez** | Dördü de ne harcadığını kaydedebiliyor — enstrümanıyla, penceresiyle, atfıyla ve **karşılaştırma koluyla**. Kol yoksa iddia `[K]` olamaz: işin ne kadara mal olduğu ölçümdür, farkı aracın yarattığı iddiadır. Ve her biri kendi **yanlış oranını reddeder**: Kıyas tohum başına maliyeti, ux-mizan bulgu başına maliyeti — ikisi de sayıyı, disiplinin önlemek için var olduğu davranışı ödüllendirerek iyileştirir. |
 | **Parçalayan, geri birleştirir** | Dördü de işi parçalara ayırarak ilerler — denetim iddiaları, plan görevleri, walkthrough akışları, üretim tohumları — ve yalnızca **iki parça aynı anda geçerliyken** var olan özellik tam o anda görünmez olur. Dördünde de sonda bir birleştirme pası var: her parça için dokunabildiği diğer parçalar, ve her çift için tek soru. Denetimde bu *"bu garanti hâlâ geçerli mi?"*, üretimde *"bunlar iki bahis mi, yoksa iki yüzü olan tek bahis mi?"* diye sorulur. En kırılganları: bir **yokluktan** hesaplanan sinyaller, tek tek çağrı yerinde uygulanan garantiler, ve tek bir öncüle dayanan tohum listeleri. Yeşil test paketi burada karşı kanıt değildir. Dördünde de pasın sonucunu yazacak bir alan var — kaydı olmayan pas, koşulmamış pastan ayırt edilemez. |
 
 ---
@@ -110,10 +111,10 @@ tutan şeydir:
 
 | Skill | Sürüm | Bu sürümde ne var |
 |---|---|---|
-| [İskele](https://github.com/XINMurat/Iskele/releases/latest) | **v1.4.0** | ROI'nin maliyet tarafı ölçülüyor: `Maliyet` sutunu, birim maliyet ve faz faz eğim, geçen süreden tahmin kalibrasyonu, `session_cost.py` · çift pası (`Cift` sekmesi) · ADR defteri · rampalar |
+| [İskele](https://github.com/XINMurat/Iskele/releases/latest) | **v1.5.0** | Beklenti sapması: önkayıtlı tahmin ile gerçekleşen efor, `estimate_basis` sayının ne olduğuna karar veriyor · birim maliyet iki paydayla · `session_cost.py` · çift pası · ADR defteri |
 | [Mizan](https://github.com/XINMurat/Mizan/releases/latest) | **v2.6.0** | R22: `cost_actual` — maliyet iddiası enstrümanını, penceresini, atfını ve karşılaştırma kolunu söyler; kolsuz iddia `[K]` olamaz · `probes` bloğu ve R19–R21 · R17, R18 · şema 1.9 |
-| [Kıyas](https://github.com/XINMurat/Kiyas/releases/latest) | **v1.3.0** | G13, çift pası: parti tohum tohum değil çift çift işaretlenir; hüküm satırı *N aday, K bağımsız bahis* basar · G12 ve rampalar (v1.2) |
-| [ux-mizan](https://github.com/XINMurat/ux-mizan/releases/latest) | **v0.5** | U13: yalnızca iki akış aynı anda etkinken var olan kusur artık kaydedilebiliyor · U11/U12 · kayıp/ölü tık tanımları · rampalar ve R-13 |
+| [Kıyas](https://github.com/XINMurat/Kiyas/releases/latest) | **v1.4.0** | G14: parti maliyeti kaydedilir — ve tohum başına maliyet bilerek kolaylaştırılmaz; bölünecekse hayatta kalan tohuma bölünür · G13 çift pası · G12 |
+| [ux-mizan](https://github.com/XINMurat/ux-mizan/releases/latest) | **v0.6** | U14: denetimin maliyeti kaydedilir, bulgu katmanlarından ayrı tutulur — bulgu başına maliyet reddedilir · U13 bileşim bulgusu · U11/U12 |
 
 Bu tablo bir anlık görüntüdür; bağlayıcı olan her deponun **Releases**
 sayfasıdır — yukarıdaki bağlantılar oraya, en son sürüme gider.
@@ -218,10 +219,10 @@ One more, and it is the only one that comes from outside the method: **an escape
 
 ### Current releases
 
-[İskele **v1.4.0**](https://github.com/XINMurat/Iskele/releases/latest) ·
+[İskele **v1.5.0**](https://github.com/XINMurat/Iskele/releases/latest) ·
 [Mizan **v2.6.0**](https://github.com/XINMurat/Mizan/releases/latest) ·
-[Kıyas **v1.3.0**](https://github.com/XINMurat/Kiyas/releases/latest) ·
-[ux-mizan **v0.5**](https://github.com/XINMurat/ux-mizan/releases/latest)
+[Kıyas **v1.4.0**](https://github.com/XINMurat/Kiyas/releases/latest) ·
+[ux-mizan **v0.6**](https://github.com/XINMurat/ux-mizan/releases/latest)
 
 A snapshot; each repository's Releases page is what binds, and the links above
 go there.
