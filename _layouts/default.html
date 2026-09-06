@@ -171,11 +171,11 @@ html.js .pane-init{display:none}
 </style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#main"><span data-chrome="en">Skip to content</span><span data-chrome="tr" hidden>İçeriğe geç</span></a>
 
 <header class="top">
   <div class="wrap">
-    <span class="brand"><b>Dört fiil</b> · four verbs</span>
+    <span class="brand"><b data-chrome="en">Four verbs</b><b data-chrome="tr" hidden>Dört fiil</b></span>
     <div class="lang" role="group" aria-label="Language / Dil">
       <button type="button" data-lang="en" aria-pressed="true">EN</button>
       <button type="button" data-lang="tr" aria-pressed="false">TR</button>
@@ -189,8 +189,7 @@ html.js .pane-init{display:none}
 
 <footer>
   <div class="wrap">
-    <p>Code MIT · prose CC BY 4.0 — details in each repository.<br>
-    <span lang="tr">Kod MIT · düzyazı CC BY 4.0 — ayrıntılar her depoda.</span></p>
+    <p><span data-chrome="en">Code MIT · prose CC BY 4.0 — details in each repository.</span><span data-chrome="tr" hidden>Kod MIT · düzyazı CC BY 4.0 — ayrıntılar her depoda.</span></p>
     <p><a href="https://github.com/XINMurat">github.com/XINMurat</a></p>
   </div>
 </footer>
@@ -202,8 +201,15 @@ html.js .pane-init{display:none}
   if (!panes.en || !panes.tr) return;
 
   function show(lang) {
-    panes.en.classList.remove('pane-init');
-    panes.tr.classList.remove('pane-init');
+    document.querySelectorAll('.pane-init').forEach(function (el) {
+      el.classList.remove('pane-init');
+    });
+    // The chrome speaks the selected language too. The brand used to read
+    // "Dört fiil · four verbs" and the footer printed both licences at once --
+    // a page that asks the reader to choose should not keep answering in both.
+    document.querySelectorAll('[data-chrome]').forEach(function (el) {
+      el.hidden = el.dataset.chrome !== lang;
+    });
     panes.en.hidden = lang !== 'en';
     panes.tr.hidden = lang !== 'tr';
     document.documentElement.lang = lang;
