@@ -104,44 +104,48 @@ lang: en
     <p class="sub">The tools hand each other files, not prose.</p>
 
     <figure class="chain">
-      <svg viewBox="0 0 780 300" role="img" aria-label="Material enters at Mizan — a document or a chat, a repo or legacy code, a project already running, or the output of an earlier Mizan mode — and it can enter at any turn, not only at the start. Mizan and Kıyas exchange in both directions: gaps and refuted patterns go to Kıyas, seeds come back as preregistered hypotheses. That pair can run on its own. When something survives and is worth building, İskele takes it, and İskele's acceptance criteria return to Mizan as entries. ux-mizan hands measured findings both into the backlog and back into the audit.">
+      <svg viewBox="0 0 850 300" role="img" aria-label="Material enters at Mizan — a document or a chat, a repo or legacy code, a project already running, or the output of an earlier Mizan mode — and it can enter at any turn, not only at the start. Mizan and Kıyas exchange in both directions: gaps and refuted patterns go to Kıyas, seeds come back as preregistered hypotheses. That pair can run on its own. When something survives and is worth building, İskele takes it, and İskele's acceptance criteria return to Mizan as entries. ux-mizan hands measured findings both into the backlog and back into the audit.">
         <defs>
           <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
             <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
           </marker>
         </defs>
-        <g fill="none" stroke="currentColor" stroke-width="1.4" opacity=".55" marker-end="url(#ar)">
-          <path d="M170,58 H192"/>
-          <path d="M350,46 H426"/>
-          <path d="M426,74 H350"/>
-          <path d="M388,90 V176"/>
-          <path d="M313,208 H240 V90"/>
-          <path d="M556,208 H467"/>
-          <path d="M635,176 V140 H505 V90"/>
+        <g class="chain-inlet">
+          <rect x="6" y="14" width="184" height="88" rx="12" fill="currentColor" fill-opacity=".035" stroke="currentColor" stroke-opacity=".45" stroke-width="1.3" stroke-dasharray="6 4"/>
+          <text class="chain-cap" x="98" y="8" text-anchor="middle">INPUT — AT ANY TURN</text>
+          <text class="chain-in" x="98" y="38" text-anchor="middle">a document or a chat,</text>
+          <text class="chain-in" x="98" y="55" text-anchor="middle">a repo, legacy code,</text>
+          <text class="chain-in" x="98" y="72" text-anchor="middle">a running project,</text>
+          <text class="chain-in" x="98" y="89" text-anchor="middle">an earlier mode&#39;s output</text>
         </g>
-        <g>
-          <rect x="0" y="18" width="170" height="80" rx="10" fill="none" stroke="currentColor" opacity=".3" stroke-dasharray="4 4"/>
-          <text class="chain-txt" x="85" y="40" text-anchor="middle">a document or a chat,</text>
-          <text class="chain-txt" x="85" y="56" text-anchor="middle">a repo, legacy code,</text>
-          <text class="chain-txt" x="85" y="72" text-anchor="middle">a running project,</text>
-          <text class="chain-txt" x="85" y="88" text-anchor="middle">an earlier mode&#39;s output</text>
-          <rect x="192" y="30" width="158" height="60" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
-          <text class="chain-node" x="271" y="66" text-anchor="middle">Mizan</text>
-          <rect x="426" y="30" width="150" height="60" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
-          <text class="chain-node" x="501" y="66" text-anchor="middle">Kıyas</text>
-          <rect x="313" y="176" width="154" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
-          <text class="chain-node" x="390" y="209" text-anchor="middle">İskele</text>
-          <rect x="556" y="176" width="154" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
-          <text class="chain-node" x="633" y="209" text-anchor="middle">ux-mizan</text>
-        </g>
-        <g class="chain-txt" text-anchor="middle">
-          <text x="388" y="24">gaps · refuted</text>
-          <text x="177" y="44">any turn</text>
-          <text x="398" y="112" text-anchor="start">seeds → preregistered</text>
-          <text x="398" y="152" text-anchor="start">worth building</text>
-          <text x="200" y="152" text-anchor="start">criteria</text>
-          <text x="512" y="200">tasks</text>
-          <text x="560" y="134">findings</text>
+        <g transform="translate(70,0)">
+          <g fill="none" stroke="currentColor" stroke-width="1.4" opacity=".55" marker-end="url(#ar)">
+            <path d="M124,58 H192"/>
+            <path d="M350,46 H426"/>
+            <path d="M426,74 H350"/>
+            <path d="M388,90 V176"/>
+            <path d="M313,208 H240 V90"/>
+            <path d="M556,208 H467"/>
+            <path d="M635,176 V140 H505 V90"/>
+          </g>
+          <g>
+            <rect x="192" y="30" width="158" height="60" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
+            <text class="chain-node" x="271" y="66" text-anchor="middle">Mizan</text>
+            <rect x="426" y="30" width="150" height="60" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
+            <text class="chain-node" x="501" y="66" text-anchor="middle">Kıyas</text>
+            <rect x="313" y="176" width="154" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
+            <text class="chain-node" x="390" y="209" text-anchor="middle">İskele</text>
+            <rect x="556" y="176" width="154" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
+            <text class="chain-node" x="633" y="209" text-anchor="middle">ux-mizan</text>
+          </g>
+          <g class="chain-txt" text-anchor="middle">
+            <text x="388" y="24">gaps · refuted</text>
+            <text x="398" y="112" text-anchor="start">seeds → preregistered</text>
+            <text x="398" y="152" text-anchor="start">worth building</text>
+            <text x="200" y="152" text-anchor="start">criteria</text>
+            <text x="512" y="200">tasks</text>
+            <text x="560" y="134">findings</text>
+          </g>
         </g>
       </svg>
       <figcaption>Two loops, not one ring. Mizan and Kıyas can go round on their
@@ -437,44 +441,48 @@ lang: en
     <p class="sub">Araçlar birbirine dosya devreder, düzyazı değil.</p>
 
     <figure class="chain">
-      <svg viewBox="0 0 780 300" role="img" aria-label="Malzeme Mizan'a girer — bir doküman ya da sohbet, bir repo ya da legacy kod, hâlihazırda süren bir proje, ya da daha önceki bir Mizan modunun çıktısı — ve yalnızca başta değil, her turda girebilir. Mizan ile Kıyas iki yönde alışveriş eder: boşluklar ve çürütülenler Kıyas'a gider, tohumlar önkayıtlı hipotez olarak geri döner. Bu çift kendi başına dönebilir. Sağ kalan bir şey inşa edilmeye değdiğinde İskele devreye girer ve kabul kriterleri Mizan'a girdi olarak döner. ux-mizan ölçülmüş bulguları hem backlog'a hem denetime verir.">
+      <svg viewBox="0 0 850 300" role="img" aria-label="Malzeme Mizan'a girer — bir doküman ya da sohbet, bir repo ya da legacy kod, hâlihazırda süren bir proje, ya da daha önceki bir Mizan modunun çıktısı — ve yalnızca başta değil, her turda girebilir. Mizan ile Kıyas iki yönde alışveriş eder: boşluklar ve çürütülenler Kıyas'a gider, tohumlar önkayıtlı hipotez olarak geri döner. Bu çift kendi başına dönebilir. Sağ kalan bir şey inşa edilmeye değdiğinde İskele devreye girer ve kabul kriterleri Mizan'a girdi olarak döner. ux-mizan ölçülmüş bulguları hem backlog'a hem denetime verir.">
         <defs>
           <marker id="ar-tr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
             <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
           </marker>
         </defs>
-        <g fill="none" stroke="currentColor" stroke-width="1.4" opacity=".55" marker-end="url(#ar-tr)">
-          <path d="M170,58 H192"/>
-          <path d="M350,46 H426"/>
-          <path d="M426,74 H350"/>
-          <path d="M388,90 V176"/>
-          <path d="M313,208 H240 V90"/>
-          <path d="M556,208 H467"/>
-          <path d="M635,176 V140 H505 V90"/>
+        <g class="chain-inlet">
+          <rect x="6" y="14" width="184" height="88" rx="12" fill="currentColor" fill-opacity=".035" stroke="currentColor" stroke-opacity=".45" stroke-width="1.3" stroke-dasharray="6 4"/>
+          <text class="chain-cap" x="98" y="8" text-anchor="middle">GİRDİ — HER TURDA</text>
+          <text class="chain-in" x="98" y="38" text-anchor="middle">doküman, sohbet, fikir,</text>
+          <text class="chain-in" x="98" y="55" text-anchor="middle">repo, legacy kod,</text>
+          <text class="chain-in" x="98" y="72" text-anchor="middle">süren bir proje,</text>
+          <text class="chain-in" x="98" y="89" text-anchor="middle">önceki modun çıktısı</text>
         </g>
-        <g>
-          <rect x="0" y="18" width="170" height="80" rx="10" fill="none" stroke="currentColor" opacity=".3" stroke-dasharray="4 4"/>
-          <text class="chain-txt" x="85" y="40" text-anchor="middle">doküman, sohbet, fikir,</text>
-          <text class="chain-txt" x="85" y="56" text-anchor="middle">repo, legacy kod,</text>
-          <text class="chain-txt" x="85" y="72" text-anchor="middle">süren bir proje,</text>
-          <text class="chain-txt" x="85" y="88" text-anchor="middle">önceki modun çıktısı</text>
-          <rect x="192" y="30" width="158" height="60" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
-          <text class="chain-node" x="271" y="66" text-anchor="middle">Mizan</text>
-          <rect x="426" y="30" width="150" height="60" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
-          <text class="chain-node" x="501" y="66" text-anchor="middle">Kıyas</text>
-          <rect x="313" y="176" width="154" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
-          <text class="chain-node" x="390" y="209" text-anchor="middle">İskele</text>
-          <rect x="556" y="176" width="154" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
-          <text class="chain-node" x="633" y="209" text-anchor="middle">ux-mizan</text>
-        </g>
-        <g class="chain-txt" text-anchor="middle">
-          <text x="388" y="24">boşluklar · çürütülenler</text>
-          <text x="177" y="44">her turda</text>
-          <text x="398" y="112" text-anchor="start">tohumlar → önkayıt</text>
-          <text x="398" y="152" text-anchor="start">inşa etmeye değer</text>
-          <text x="200" y="152" text-anchor="start">kriterler</text>
-          <text x="512" y="200">görevler</text>
-          <text x="560" y="134">bulgular</text>
+        <g transform="translate(70,0)">
+          <g fill="none" stroke="currentColor" stroke-width="1.4" opacity=".55" marker-end="url(#ar-tr)">
+            <path d="M124,58 H192"/>
+            <path d="M350,46 H426"/>
+            <path d="M426,74 H350"/>
+            <path d="M388,90 V176"/>
+            <path d="M313,208 H240 V90"/>
+            <path d="M556,208 H467"/>
+            <path d="M635,176 V140 H505 V90"/>
+          </g>
+          <g>
+            <rect x="192" y="30" width="158" height="60" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
+            <text class="chain-node" x="271" y="66" text-anchor="middle">Mizan</text>
+            <rect x="426" y="30" width="150" height="60" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
+            <text class="chain-node" x="501" y="66" text-anchor="middle">Kıyas</text>
+            <rect x="313" y="176" width="154" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
+            <text class="chain-node" x="390" y="209" text-anchor="middle">İskele</text>
+            <rect x="556" y="176" width="154" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
+            <text class="chain-node" x="633" y="209" text-anchor="middle">ux-mizan</text>
+          </g>
+          <g class="chain-txt" text-anchor="middle">
+            <text x="388" y="24">boşluklar · çürütülenler</text>
+            <text x="398" y="112" text-anchor="start">tohumlar → önkayıt</text>
+            <text x="398" y="152" text-anchor="start">inşa etmeye değer</text>
+            <text x="200" y="152" text-anchor="start">kriterler</text>
+            <text x="512" y="200">görevler</text>
+            <text x="560" y="134">bulgular</text>
+          </g>
         </g>
       </svg>
       <figcaption>Tek halka değil, iki döngü. Mizan ile Kıyas, düşünme ne kadar
