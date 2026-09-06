@@ -104,48 +104,62 @@ lang: en
     <p class="sub">The tools hand each other files, not prose.</p>
 
     <figure class="chain">
-      <svg viewBox="0 0 720 250" role="img" aria-label="İskele hands a backlog to Mizan, Mizan hands refuted patterns to Kıyas, Kıyas hands seeds back to İskele, and ux-mizan hands measured findings into the backlog.">
+      <svg viewBox="0 0 780 250" role="img" aria-label="An unstructured input — a document, a chat, an article, an idea — enters at Mizan, which audits it; Mizan hands refuted patterns and gaps to Kıyas; Kıyas hands surviving seeds to İskele; İskele's backlog returns to Mizan as preregistered entries; and ux-mizan hands measured findings into that backlog.">
         <defs>
           <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
             <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
           </marker>
         </defs>
         <g fill="none" stroke="currentColor" stroke-width="1.4" opacity=".55" marker-end="url(#ar)">
-          <path d="M186,66 H272"/>
-          <path d="M446,66 H532"/>
-          <path d="M646,96 V140 H120 V96"/>
-          <path d="M272,192 H62 V96"/>
+          <path d="M162,66 H192"/>
+          <path d="M350,66 H380"/>
+          <path d="M538,66 H568"/>
+          <path d="M647,98 V150 H271 V98"/>
+          <path d="M538,204 H700 V98"/>
         </g>
         <g>
-          <rect x="26" y="40" width="160" height="52" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
-          <text class="chain-node" x="106" y="71" text-anchor="middle">İskele</text>
-          <rect x="272" y="40" width="174" height="52" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
-          <text class="chain-node" x="359" y="71" text-anchor="middle">Mizan</text>
-          <rect x="532" y="40" width="160" height="52" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
-          <text class="chain-node" x="612" y="71" text-anchor="middle">Kıyas</text>
-          <rect x="272" y="166" width="174" height="52" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
-          <text class="chain-node" x="359" y="197" text-anchor="middle">ux-mizan</text>
+          <rect x="8" y="38" width="154" height="56" rx="10" fill="none" stroke="currentColor" opacity=".3" stroke-dasharray="4 4"/>
+          <text class="chain-txt" x="85" y="60" text-anchor="middle">a document, a chat,</text>
+          <text class="chain-txt" x="85" y="76" text-anchor="middle">an article, an idea</text>
+          <rect x="192" y="38" width="158" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
+          <text class="chain-node" x="271" y="71" text-anchor="middle">Mizan</text>
+          <rect x="380" y="38" width="158" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
+          <text class="chain-node" x="459" y="71" text-anchor="middle">Kıyas</text>
+          <rect x="568" y="38" width="158" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
+          <text class="chain-node" x="647" y="71" text-anchor="middle">İskele</text>
+          <rect x="380" y="176" width="158" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
+          <text class="chain-node" x="459" y="207" text-anchor="middle">ux-mizan</text>
         </g>
         <g class="chain-txt" text-anchor="middle">
-          <text x="229" y="56">backlog</text>
-          <text x="489" y="56">refuted</text>
-          <text x="176" y="185">findings</text>
-          <text x="196" y="133">seeds</text>
+          <text x="177" y="30">audit</text>
+          <text x="365" y="30">refuted</text>
+          <text x="553" y="30">seeds</text>
+          <text x="430" y="167">backlog</text>
+          <text x="640" y="196">findings</text>
         </g>
       </svg>
-      <figcaption>One canonical loop: criteria become entries, refutations become
-      constraints, surviving seeds become tasks.</figcaption>
+      <figcaption>The entry is the loose end on the left: something you already
+      have. Everything after it is the loop — and the loop only closes because
+      İskele's criteria go back in as Mizan entries.</figcaption>
     </figure>
 
     <ul class="plain">
-      <li><strong>İskele → Mizan:</strong> acceptance criteria become
-      preregistration entries (<code>iskele_to_registry.py</code>); every
-      sentence claiming "verified" enters the counter-example sweep.</li>
+      <li><strong>You → Mizan:</strong> the entry point, and the one arrow that
+      starts outside the system. Something you already have — an AI
+      conversation, an article, an old note, a rough idea — gets atomized into
+      claims and tiered. What survives is <code>[H]</code>; what does not is
+      recorded rather than deleted.</li>
       <li><strong>Mizan → Kıyas:</strong> refuted entries become negative
-      constraints; Kıyas consults them before proposing a relative of something
-      already refuted.</li>
+      constraints, and the gap map becomes the brief. Kıyas consults them before
+      proposing a relative of something already refuted — which is how it
+      produces what the audit could not see rather than more of what it
+      already said.</li>
       <li><strong>Kıyas → İskele:</strong> surviving seeds become backlog tasks
       (<code>kiyas_to_backlog.py</code>) — a seed is not a plan.</li>
+      <li><strong>İskele → Mizan:</strong> acceptance criteria become
+      preregistration entries (<code>iskele_to_registry.py</code>); every
+      sentence claiming "verified" enters the counter-example sweep. This is
+      the arrow that closes the loop.</li>
       <li><strong>ux-mizan → İskele:</strong> measured UX findings re-enter the
       backlog as tasks carrying acceptance criteria of their own.</li>
     </ul>
@@ -397,47 +411,59 @@ lang: en
     <p class="sub">Araçlar birbirine dosya devreder, düzyazı değil.</p>
 
     <figure class="chain">
-      <svg viewBox="0 0 720 250" role="img" aria-label="İskele backlog'u Mizan'a, Mizan çürütülenleri Kıyas'a, Kıyas tohumları İskele'ye devreder; ux-mizan ölçülmüş bulguları backlog'a verir.">
+      <svg viewBox="0 0 780 250" role="img" aria-label="Yapılandırılmamış bir girdi — bir doküman, bir sohbet, bir makale, bir fikir — Mizan'a girer ve denetlenir; Mizan çürütülenleri ve boşlukları Kıyas'a verir; Kıyas sağ kalan tohumları İskele'ye verir; İskele'nin backlog'u önkayıtlı girdiler olarak Mizan'a döner; ux-mizan ölçülmüş bulguları o backlog'a verir.">
         <defs>
           <marker id="ar-tr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
             <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
           </marker>
         </defs>
         <g fill="none" stroke="currentColor" stroke-width="1.4" opacity=".55" marker-end="url(#ar-tr)">
-          <path d="M186,66 H272"/>
-          <path d="M446,66 H532"/>
-          <path d="M646,96 V140 H120 V96"/>
-          <path d="M272,192 H62 V96"/>
+          <path d="M162,66 H192"/>
+          <path d="M350,66 H380"/>
+          <path d="M538,66 H568"/>
+          <path d="M647,98 V150 H271 V98"/>
+          <path d="M538,204 H700 V98"/>
         </g>
         <g>
-          <rect x="26" y="40" width="160" height="52" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
-          <text class="chain-node" x="106" y="71" text-anchor="middle">İskele</text>
-          <rect x="272" y="40" width="174" height="52" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
-          <text class="chain-node" x="359" y="71" text-anchor="middle">Mizan</text>
-          <rect x="532" y="40" width="160" height="52" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
-          <text class="chain-node" x="612" y="71" text-anchor="middle">Kıyas</text>
-          <rect x="272" y="166" width="174" height="52" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
-          <text class="chain-node" x="359" y="197" text-anchor="middle">ux-mizan</text>
+          <rect x="8" y="38" width="154" height="56" rx="10" fill="none" stroke="currentColor" opacity=".3" stroke-dasharray="4 4"/>
+          <text class="chain-txt" x="85" y="60" text-anchor="middle">bir doküman, sohbet,</text>
+          <text class="chain-txt" x="85" y="76" text-anchor="middle">makale, ham fikir</text>
+          <rect x="192" y="38" width="158" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
+          <text class="chain-node" x="271" y="71" text-anchor="middle">Mizan</text>
+          <rect x="380" y="38" width="158" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
+          <text class="chain-node" x="459" y="71" text-anchor="middle">Kıyas</text>
+          <rect x="568" y="38" width="158" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
+          <text class="chain-node" x="647" y="71" text-anchor="middle">İskele</text>
+          <rect x="380" y="176" width="158" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
+          <text class="chain-node" x="459" y="207" text-anchor="middle">ux-mizan</text>
         </g>
         <g class="chain-txt" text-anchor="middle">
-          <text x="229" y="56">backlog</text>
-          <text x="489" y="56">çürütülenler</text>
-          <text x="176" y="185">bulgular</text>
-          <text x="196" y="133">tohumlar</text>
+          <text x="177" y="30">denetle</text>
+          <text x="365" y="30">çürütülenler</text>
+          <text x="553" y="30">tohumlar</text>
+          <text x="430" y="167">backlog</text>
+          <text x="640" y="196">bulgular</text>
         </g>
       </svg>
-      <figcaption>Tek bir kanonik döngü: kriterler girdiye, çürütmeler kısıta,
-      sağ kalan tohumlar göreve dönüşür.</figcaption>
+      <figcaption>Giriş, soldaki açık uç: elinizde zaten olan bir şey. Ondan
+      sonrası döngü — ve döngü ancak İskele'nin kriterleri Mizan girdisi olarak
+      geri girdiği için kapanıyor.</figcaption>
     </figure>
 
     <ul class="plain">
-      <li><strong>İskele → Mizan:</strong> kabul kriterleri önkayıt girdilerine
-      dönüşür (<code>iskele_to_registry.py</code>); "doğrulandı" diyen her cümle
-      karşı-örnek taramasına girer.</li>
-      <li><strong>Mizan → Kıyas:</strong> reddedilen kayıtlar negatif kısıt olur;
-      Kıyas, çürütülmüş bir şeyin akrabasını önermeden önce oraya bakar.</li>
+      <li><strong>Siz → Mizan:</strong> giriş noktası, ve sistemin dışından
+      başlayan tek ok. Elinizde zaten olan bir şey — bir YZ sohbeti, bir makale,
+      eski bir not, ham bir fikir — iddialara ayrılır ve katmanlanır. Ayakta
+      kalan <code>[H]</code> olur; kalmayan silinmez, kaydedilir.</li>
+      <li><strong>Mizan → Kıyas:</strong> reddedilen kayıtlar negatif kısıt,
+      boşluk haritası ise brief olur. Kıyas, çürütülmüş bir şeyin akrabasını
+      önermeden önce oraya bakar — denetimin <em>göremediğini</em> üretmesinin
+      yolu bu; söylediğinin fazlasını değil.</li>
       <li><strong>Kıyas → İskele:</strong> sağ kalan tohumlar backlog görevine
       dönüşür (<code>kiyas_to_backlog.py</code>) — bir tohum plan değildir.</li>
+      <li><strong>İskele → Mizan:</strong> kabul kriterleri önkayıt girdilerine
+      dönüşür (<code>iskele_to_registry.py</code>); "doğrulandı" diyen her cümle
+      karşı-örnek taramasına girer. Döngüyü kapatan ok budur.</li>
       <li><strong>ux-mizan → İskele:</strong> ölçülmüş UX bulguları, kendi kabul
       kriterini taşıyan görevler olarak backlog'a geri girer.</li>
     </ul>
