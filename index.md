@@ -101,6 +101,7 @@ tutan şeydir:
 | **Kuralı taşıyan şey betiktir** | Yalnızca düzyazıyla korunan kural, host'un düzyazısıyla pazarlık edilebilir. |
 | **Skill başkasının kurulumunda koşar** | Sessizce uyma; hangi talimatın hangi adımı devre dışı bıraktığını söyle. |
 | **Kaçan, sınıfa dönüşür** | Dışarıdan gelen tek sinyal — kullanıcının bulduğu, üretimde patlayan, batch'in dışından gelen. Sayılmakla kalmaz: onu yakalaması gereken kontrol adlandırılır, yoksa artık var olan kontrol yazılır. Dördünde de bir rampa bunu zorunlu kılar. |
+| **Bütçesi olan bir bağlam** | Bir skill, bağımlılığın bayt harcadığı gibi token harcar: kuran herkese, her soğuk başlangıçta. Dördünde de `tools/token_budget.py` üç katmanı ölçer — her oturumda bağlamda olan açıklama, gövde, ve talep üzerine okunanlar — ve **önkayıtlı tavanları** CI'da uygular. Tavanı yükseltmek gerekçeli bir commit'tir; sessizce büyümek seçeneklerden biri değildir. |
 | **Parçalayan, geri birleştirir** | Dördü de işi parçalara ayırarak ilerler — denetim iddiaları, plan görevleri, walkthrough akışları, üretim tohumları — ve yalnızca **iki parça aynı anda geçerliyken** var olan özellik tam o anda görünmez olur. Dördünde de sonda bir birleştirme pası var: her parça için dokunabildiği diğer parçalar, ve her çift için tek soru. Denetimde bu *"bu garanti hâlâ geçerli mi?"*, üretimde *"bunlar iki bahis mi, yoksa iki yüzü olan tek bahis mi?"* diye sorulur. En kırılganları: bir **yokluktan** hesaplanan sinyaller, tek tek çağrı yerinde uygulanan garantiler, ve tek bir öncüle dayanan tohum listeleri. Yeşil test paketi burada karşı kanıt değildir. Dördünde de pasın sonucunu yazacak bir alan var — kaydı olmayan pas, koşulmamış pastan ayırt edilemez. |
 
 ---
@@ -109,7 +110,7 @@ tutan şeydir:
 
 | Skill | Sürüm | Bu sürümde ne var |
 |---|---|---|
-| [İskele](https://github.com/XINMurat/Iskele/releases/latest) | **v1.3.0** | Çift pası çizelgede bir yer kazandı (`Cift` sekmesi, `GEN:CIFT` bölgesi) · faz-kapanış çizelgesi · ADR defteri · `AGENTS.md` · rampalar `RR-00`…`RR-13` |
+| [İskele](https://github.com/XINMurat/Iskele/releases/latest) | **v1.4.0** | ROI'nin maliyet tarafı ölçülüyor: `Maliyet` sutunu, birim maliyet ve faz faz eğim, geçen süreden tahmin kalibrasyonu, `session_cost.py` · çift pası (`Cift` sekmesi) · ADR defteri · rampalar |
 | [Mizan](https://github.com/XINMurat/Mizan/releases/latest) | **v2.5.0** | `probes` bloğu ve R19–R21: alan probu, bileşim pası, kaçak→sınıf döngüsü · R17 (duran girdiye son tarih) · R18 (önkayıt ne kilitlediğini söyler) · registry şeması 1.8 |
 | [Kıyas](https://github.com/XINMurat/Kiyas/releases/latest) | **v1.3.0** | G13, çift pası: parti tohum tohum değil çift çift işaretlenir; hüküm satırı *N aday, K bağımsız bahis* basar · G12 ve rampalar (v1.2) |
 | [ux-mizan](https://github.com/XINMurat/ux-mizan/releases/latest) | **v0.5** | U13: yalnızca iki akış aynı anda etkinken var olan kusur artık kaydedilebiliyor · U11/U12 · kayıp/ölü tık tanımları · rampalar ve R-13 |
@@ -217,7 +218,7 @@ One more, and it is the only one that comes from outside the method: **an escape
 
 ### Current releases
 
-[İskele **v1.3.0**](https://github.com/XINMurat/Iskele/releases/latest) ·
+[İskele **v1.4.0**](https://github.com/XINMurat/Iskele/releases/latest) ·
 [Mizan **v2.5.0**](https://github.com/XINMurat/Mizan/releases/latest) ·
 [Kıyas **v1.3.0**](https://github.com/XINMurat/Kiyas/releases/latest) ·
 [ux-mizan **v0.5**](https://github.com/XINMurat/ux-mizan/releases/latest)
