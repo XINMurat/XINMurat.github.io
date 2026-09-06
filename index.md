@@ -111,7 +111,7 @@ tutan şeydir:
 | Skill | Sürüm | Bu sürümde ne var |
 |---|---|---|
 | [İskele](https://github.com/XINMurat/Iskele/releases/latest) | **v1.4.0** | ROI'nin maliyet tarafı ölçülüyor: `Maliyet` sutunu, birim maliyet ve faz faz eğim, geçen süreden tahmin kalibrasyonu, `session_cost.py` · çift pası (`Cift` sekmesi) · ADR defteri · rampalar |
-| [Mizan](https://github.com/XINMurat/Mizan/releases/latest) | **v2.5.0** | `probes` bloğu ve R19–R21: alan probu, bileşim pası, kaçak→sınıf döngüsü · R17 (duran girdiye son tarih) · R18 (önkayıt ne kilitlediğini söyler) · registry şeması 1.8 |
+| [Mizan](https://github.com/XINMurat/Mizan/releases/latest) | **v2.6.0** | R22: `cost_actual` — maliyet iddiası enstrümanını, penceresini, atfını ve karşılaştırma kolunu söyler; kolsuz iddia `[K]` olamaz · `probes` bloğu ve R19–R21 · R17, R18 · şema 1.9 |
 | [Kıyas](https://github.com/XINMurat/Kiyas/releases/latest) | **v1.3.0** | G13, çift pası: parti tohum tohum değil çift çift işaretlenir; hüküm satırı *N aday, K bağımsız bahis* basar · G12 ve rampalar (v1.2) |
 | [ux-mizan](https://github.com/XINMurat/ux-mizan/releases/latest) | **v0.5** | U13: yalnızca iki akış aynı anda etkinken var olan kusur artık kaydedilebiliyor · U11/U12 · kayıp/ölü tık tanımları · rampalar ve R-13 |
 
@@ -219,7 +219,7 @@ One more, and it is the only one that comes from outside the method: **an escape
 ### Current releases
 
 [İskele **v1.4.0**](https://github.com/XINMurat/Iskele/releases/latest) ·
-[Mizan **v2.5.0**](https://github.com/XINMurat/Mizan/releases/latest) ·
+[Mizan **v2.6.0**](https://github.com/XINMurat/Mizan/releases/latest) ·
 [Kıyas **v1.3.0**](https://github.com/XINMurat/Kiyas/releases/latest) ·
 [ux-mizan **v0.5**](https://github.com/XINMurat/ux-mizan/releases/latest)
 
