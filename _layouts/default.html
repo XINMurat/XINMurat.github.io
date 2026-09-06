@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title | default: site.title }}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+<meta property="og:title" content="{{ page.title | default: site.title }}">
+<meta property="og:description" content="{{ page.description | default: site.description }}">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
+<style>
+:root{
+  --bg:#fbfaf8; --bg-soft:#f3f1ec; --card:#fff; --ink:#1b1a17; --ink-soft:#55524b;
+  --ink-faint:#8b8780; --line:#e2ded5; --line-soft:#eeebe4;
+  --accent:#7a5c2e;            /* iskele  — builds */
+  --accent-2:#2f5d50;          /* mizan   — weighs */
+  --accent-3:#6b4a6e;          /* kiyas   — generates */
+  --accent-4:#2b4c6f;          /* ux      — measures */
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#141412; --bg-soft:#1c1c19; --card:#1b1b18; --ink:#eceae5; --ink-soft:#b3afa6;
+    --ink-faint:#7d7970; --line:#2f2e2a; --line-soft:#26251f;
+    --accent:#c8a468; --accent-2:#6fae99; --accent-3:#b493b8; --accent-4:#7ea9d0;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:var(--sans); font-size:17px; line-height:1.62;
+  font-feature-settings:"kern","liga";
+}
+.wrap{max-width:50rem; margin:0 auto; padding:0 1.25rem}
+
+/* ---------- header ---------- */
+.top{
+  position:sticky; top:0; z-index:20; backdrop-filter:blur(8px);
+  background:color-mix(in srgb,var(--bg) 86%,transparent);
+  border-bottom:1px solid var(--line);
+}
+.top .wrap{display:flex; align-items:center; gap:1rem; height:3.25rem}
+.brand{font-family:var(--mono); font-size:.82rem; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--ink-faint); margin-right:auto}
+.brand b{color:var(--ink); font-weight:600}
+.lang{display:flex; gap:.25rem; background:var(--bg-soft); border:1px solid var(--line);
+  border-radius:999px; padding:.15rem}
+.lang button{
+  font:inherit; font-size:.78rem; font-family:var(--mono); letter-spacing:.04em;
+  border:0; background:transparent; color:var(--ink-soft); cursor:pointer;
+  padding:.3rem .7rem; border-radius:999px; transition:background .15s,color .15s;
+}
+.lang button[aria-pressed="true"]{background:var(--card); color:var(--ink);
+  font-weight:650; box-shadow:0 1px 2px rgb(0 0 0/.10); outline:1px solid var(--line)}
+.lang button:hover{color:var(--ink)}
+
+/* ---------- hero ---------- */
+.hero{padding:3.5rem 0 2.25rem; border-bottom:1px solid var(--line-soft)}
+.hero h1{
+  font-size:clamp(2.1rem,6vw,3.1rem); line-height:1.08; letter-spacing:-.02em;
+  margin:0 0 .9rem; font-weight:640;
+}
+.hero .lede{font-size:1.12rem; color:var(--ink-soft); margin:0 0 1.5rem; max-width:38rem}
+.verbs{display:flex; flex-wrap:wrap; gap:.5rem; margin:0 0 1.25rem; padding:0; list-style:none}
+.verbs li{
+  font-family:var(--mono); font-size:.8rem; letter-spacing:.02em;
+  border:1px solid var(--line); border-radius:.4rem; padding:.35rem .6rem;
+  background:var(--card); color:var(--ink-soft);
+}
+.verbs b{color:var(--ink); font-weight:600}
+.verbs li:nth-child(1) b{color:var(--accent)}
+.verbs li:nth-child(2) b{color:var(--accent-2)}
+.verbs li:nth-child(3) b{color:var(--accent-3)}
+.verbs li:nth-child(4) b{color:var(--accent-4)}
+.canon{font-size:.9rem; color:var(--ink-faint); margin:0}
+
+/* ---------- sections ---------- */
+main{padding:2.5rem 0 1rem}
+section.block{padding:2.25rem 0; border-bottom:1px solid var(--line-soft)}
+section.block:last-of-type{border-bottom:0}
+h2{font-size:1.45rem; letter-spacing:-.01em; margin:0 0 .35rem; font-weight:620}
+h2+.sub{color:var(--ink-faint); font-size:.95rem; margin:0 0 1.5rem}
+h3{font-size:1.06rem; margin:1.75rem 0 .4rem; font-weight:620}
+p{margin:0 0 1rem}
+a{color:inherit; text-decoration:underline; text-decoration-color:var(--line);
+  text-underline-offset:.18em; transition:text-decoration-color .15s}
+a:hover{text-decoration-color:currentColor}
+code{font-family:var(--mono); font-size:.86em; background:var(--bg-soft);
+  border:1px solid var(--line-soft); border-radius:.25rem; padding:.05em .32em}
+em{color:var(--ink-soft)}
+
+/* ---------- skill cards ---------- */
+.cards{display:grid; gap:1rem; grid-template-columns:1fr; margin:1.5rem 0 0}
+@media (min-width:44rem){.cards{grid-template-columns:1fr 1fr}}
+.card{
+  background:var(--card); border:1px solid var(--line); border-radius:.7rem;
+  padding:1.15rem 1.25rem 1.25rem; position:relative; overflow:hidden;
+}
+.card::before{content:""; position:absolute; inset:0 0 auto 0; height:3px; background:var(--c,var(--line))}
+.card:nth-child(1){--c:var(--accent)}
+.card:nth-child(2){--c:var(--accent-2)}
+.card:nth-child(3){--c:var(--accent-3)}
+.card:nth-child(4){--c:var(--accent-4)}
+.card h3{margin:.25rem 0 .1rem; font-size:1.15rem}
+.card h3 a{text-decoration:none}
+.card h3 a:hover{text-decoration:underline; text-decoration-color:var(--c)}
+.card .verb{font-family:var(--mono); font-size:.72rem; letter-spacing:.09em;
+  text-transform:uppercase; color:var(--c); font-weight:600}
+.card p{font-size:.94rem; margin:.55rem 0 0; color:var(--ink-soft)}
+.card .key{font-size:.9rem; margin-top:.7rem; padding-top:.7rem;
+  border-top:1px dashed var(--line); color:var(--ink)}
+.card .links{margin-top:.85rem; font-family:var(--mono); font-size:.76rem;
+  letter-spacing:.03em; color:var(--ink-faint)}
+.card .links a{text-decoration:none; color:var(--ink-soft)}
+.card .links a:hover{color:var(--ink); text-decoration:underline}
+
+/* ---------- diagram ---------- */
+figure.chain{margin:1.5rem 0 1rem; padding:1.25rem; background:var(--card);
+  border:1px solid var(--line); border-radius:.7rem}
+figure.chain svg{width:100%; height:auto; display:block}
+figure.chain figcaption{font-size:.85rem; color:var(--ink-faint); margin-top:.85rem;
+  text-align:center}
+.chain-txt{font-family:var(--mono); font-size:.72rem; fill:var(--ink-soft)}
+.chain-node{font-family:var(--sans); font-size:.86rem; font-weight:600; fill:var(--ink)}
+
+/* ---------- tables ---------- */
+.tablewrap{overflow-x:auto; margin:1.25rem 0; border:1px solid var(--line);
+  border-radius:.6rem; background:var(--card)}
+table{border-collapse:collapse; width:100%; font-size:.92rem}
+th,td{text-align:left; padding:.7rem .85rem; border-bottom:1px solid var(--line-soft);
+  vertical-align:top}
+thead th{font-family:var(--mono); font-size:.74rem; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--ink-faint); background:var(--bg-soft);
+  border-bottom:1px solid var(--line)}
+tbody tr:last-child td{border-bottom:0}
+td:first-child{white-space:nowrap}
+td strong{font-weight:620}
+
+/* ---------- lists ---------- */
+ul.plain{list-style:none; padding:0; margin:1rem 0}
+ul.plain li{padding:.55rem 0 .55rem 1.4rem; position:relative; border-bottom:1px solid var(--line-soft)}
+ul.plain li:last-child{border-bottom:0}
+ul.plain li::before{content:"→"; position:absolute; left:0; color:var(--ink-faint);
+  font-family:var(--mono); font-size:.85rem}
+ul{padding-left:1.2rem}
+li{margin:.35rem 0}
+
+/* ---------- install / footer ---------- */
+.note{background:var(--bg-soft); border:1px solid var(--line); border-radius:.6rem;
+  padding:1rem 1.15rem; font-size:.93rem; color:var(--ink-soft)}
+.note strong{color:var(--ink)}
+footer{border-top:1px solid var(--line); margin-top:2rem; padding:2rem 0 3rem;
+  font-size:.87rem; color:var(--ink-faint)}
+footer a{color:var(--ink-soft)}
+.tiers{font-family:var(--mono); font-size:.82rem}
+
+[hidden]{display:none !important}
+.skip{position:absolute; left:-9999px}
+.skip:focus{left:1rem; top:1rem; background:var(--card); padding:.5rem .8rem;
+  border:1px solid var(--line); border-radius:.4rem; z-index:30}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <span class="brand"><b>Dört fiil</b> · four verbs</span>
+    <div class="lang" role="group" aria-label="Language / Dil">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="tr" aria-pressed="false">TR</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+{{ content }}
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Code MIT · prose CC BY 4.0 — details in each repository.<br>
+    <span lang="tr">Kod MIT · düzyazı CC BY 4.0 — ayrıntılar her depoda.</span></p>
+    <p><a href="https://github.com/XINMurat">github.com/XINMurat</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var buttons = document.querySelectorAll('.lang button');
+  var panes = { en: document.getElementById('pane-en'), tr: document.getElementById('pane-tr') };
+  if (!panes.en || !panes.tr) return;
+
+  function show(lang) {
+    panes.en.hidden = lang !== 'en';
+    panes.tr.hidden = lang !== 'tr';
+    document.documentElement.lang = lang;
+    buttons.forEach(function (b) {
+      b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
+    });
+    try { localStorage.setItem('lang', lang); } catch (e) {}
+  }
+
+  // English is the default, deliberately: the page's document order is EN then
+  // TR, and a reader arriving with no preference should see the same thing the
+  // markup says first. Browser-language sniffing was tried and removed -- it
+  // made the page open in a language the author had not chosen to lead with,
+  // and #tr / #en still work for anyone who wants to link straight to one.
+  var stored = null;
+  try { stored = localStorage.getItem('lang'); } catch (e) {}
+  var hash = (location.hash || '').replace('#', '');
+  var initial = (hash === 'tr' || hash === 'en') ? hash : (stored || 'en');
+  show(initial);
+
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () { show(b.dataset.lang); });
+  });
+})();
+</script>
+</body>
+</html>

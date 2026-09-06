@@ -1,4 +1,9 @@
-title: "Dört fiil — İskele · Mizan · Kıyas · ux-mizan"
-description: "Four Claude skills that keep each other honest: one builds the structure, one weighs the claims, one generates the candidates, one measures the experience. Bilingual TR/EN."
-theme: jekyll-theme-minimal
-lang: tr
+title: "Four verbs — İskele · Mizan · Kıyas · ux-mizan"
+description: "Four Claude skills that keep each other honest: one builds the structure, one weighs the claims, one generates the candidates, one measures the experience. Bilingual EN/TR, English first."
+lang: en
+
+# No gem theme: the page ships its own layout in _layouts/default.html. A theme
+# would decide the typography and the dark mode for us, and this page has four
+# accents and two languages to keep in agreement -- cheaper to own outright than
+# to override.
+plugins: []
