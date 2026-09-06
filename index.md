@@ -111,8 +111,8 @@ lang: en
           </marker>
         </defs>
         <g class="chain-inlet">
-          <rect x="6" y="14" width="184" height="88" rx="12" fill="currentColor" fill-opacity=".035" stroke="currentColor" stroke-opacity=".45" stroke-width="1.3" stroke-dasharray="6 4"/>
-          <text class="chain-cap" x="98" y="8" text-anchor="middle">INPUT — AT ANY TURN</text>
+          <rect x="6" y="17" width="184" height="87" rx="12" fill="currentColor" fill-opacity=".035" stroke="currentColor" stroke-opacity=".45" stroke-width="1.3" stroke-dasharray="6 4"/>
+          <text class="chain-cap" x="98" y="11" text-anchor="middle">INPUT — AT ANY TURN</text>
           <text class="chain-in" x="98" y="38" text-anchor="middle">a document or a chat,</text>
           <text class="chain-in" x="98" y="55" text-anchor="middle">a repo, legacy code,</text>
           <text class="chain-in" x="98" y="72" text-anchor="middle">a running project,</text>
@@ -448,8 +448,8 @@ lang: en
           </marker>
         </defs>
         <g class="chain-inlet">
-          <rect x="6" y="14" width="184" height="88" rx="12" fill="currentColor" fill-opacity=".035" stroke="currentColor" stroke-opacity=".45" stroke-width="1.3" stroke-dasharray="6 4"/>
-          <text class="chain-cap" x="98" y="8" text-anchor="middle">GİRDİ — HER TURDA</text>
+          <rect x="6" y="17" width="184" height="87" rx="12" fill="currentColor" fill-opacity=".035" stroke="currentColor" stroke-opacity=".45" stroke-width="1.3" stroke-dasharray="6 4"/>
+          <text class="chain-cap" x="98" y="11" text-anchor="middle">GİRDİ — HER TURDA</text>
           <text class="chain-in" x="98" y="38" text-anchor="middle">doküman, sohbet, fikir,</text>
           <text class="chain-in" x="98" y="55" text-anchor="middle">repo, legacy kod,</text>
           <text class="chain-in" x="98" y="72" text-anchor="middle">süren bir proje,</text>
