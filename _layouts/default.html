@@ -161,6 +161,7 @@ footer{border-top:1px solid var(--line); margin-top:2rem; padding:2rem 0 3rem;
   font-size:.87rem; color:var(--ink-faint)}
 footer a{color:var(--ink-soft)}
 .tiers{font-family:var(--mono); font-size:.82rem}
+.stamp{font-size:.82rem; opacity:.85}
 
 [hidden]{display:none !important}
 /* The second pane is hidden by CSS only when scripting is on, so a reader with
@@ -194,6 +195,19 @@ html.js .pane-init{display:none}
   <div class="wrap">
     <p><span data-chrome="en">Code MIT · prose CC BY 4.0 — details in each repository.</span><span data-chrome="tr" hidden>Kod MIT · düzyazı CC BY 4.0 — ayrıntılar her depoda.</span></p>
     <p><a href="https://github.com/XINMurat">github.com/XINMurat</a></p>
+    <!-- The version stamp. It exists because of a recorded escape (Mizan
+         ESC-M003): four independent AI reviews of this page all reported the
+         release numbers one version stale and presented that as "I read the
+         page". Nothing on the page let a reader -- human or model -- say WHICH
+         version they had read, so the error was invisible. The lesson had been
+         recorded twice before (D-M005, R-M001) and never turned into a control;
+         recording a lesson is not building one. Preregistered as YZ-004. -->
+    <p class="stamp">
+      <span data-chrome="en">This page:</span><span data-chrome="tr" hidden>Bu sayfa:</span>
+      <code>{{ site.time | date: "%Y-%m-%d" }}</code>{% if site.github.build_revision %}
+      · <code>{{ site.github.build_revision | slice: 0, 7 }}</code>{% endif %}
+      <span data-chrome="en">— quote it when you quote the page.</span><span data-chrome="tr" hidden>— sayfayı alıntılarken bunu da alıntılayın.</span>
+    </p>
   </div>
 </footer>
 

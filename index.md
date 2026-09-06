@@ -285,6 +285,23 @@ lang: en
 
 <section class="block">
   <div class="wrap">
+    <h2>A worked run</h2>
+    <p class="sub">The chain above, on real material — including where it went wrong.</p>
+    <p>Someone asked four AI assistants what they thought of these skills and
+    brought the answers back to be audited. All four reported the release
+    numbers one version stale; the audit itself then got two of its own findings
+    wrong and had to reverse them on the record. The generator, working under
+    the registry's refuted patterns, found a reward-hacking hole in a proposal
+    three of the four had praised.</p>
+    <p><a href="/case-study.html"><strong>Read the case study →</strong></a>
+    Five seeds, three independent bets, one escape turned into the version stamp
+    now in this page's footer — and a closing section on what a single session
+    cannot show.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
     <h2>Current releases</h2>
     <p class="sub">A snapshot. Each repository's Releases page is what binds —
     the links go there.</p>
@@ -618,6 +635,23 @@ lang: en
         </tbody>
       </table>
     </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <h2>Çalışılmış bir koşum</h2>
+    <p class="sub">Yukarıdaki zincir, gerçek malzeme üzerinde — yanıldığı yer dahil.</p>
+    <p>Biri dört yapay zekâya bu skill'ler hakkında ne düşündüklerini sordu ve
+    cevapları denetlenmek üzere geri getirdi. Dördü de sürüm numaralarını tam
+    bir sürüm geride verdi; sonra denetimin kendisi iki bulgusunda yanıldı ve
+    onları kayda geçerek geri aldı. Üreteç ise, registry'nin çürütülmüş
+    örüntüleri altında çalışırken, dördünden üçünün övdüğü bir öneride bir
+    ödül-hackleme açığı buldu.</p>
+    <p><a href="/case-study.html"><strong>Vaka çalışmasını oku →</strong></a>
+    Beş tohum, üç bağımsız bahis, bu sayfanın altbilgisindeki sürüm damgasına
+    dönüşmüş bir kaçak — ve tek bir oturumun neyi gösteremeyeceğine dair bir
+    kapanış bölümü.</p>
   </div>
 </section>
 
