@@ -104,14 +104,14 @@ lang: en
     <p class="sub">The tools hand each other files, not prose.</p>
 
     <figure class="chain">
-      <svg viewBox="0 0 780 300" role="img" aria-label="An unstructured input — a document, a chat, an article, an idea — enters at Mizan. Mizan and Kıyas exchange in both directions: gaps and refuted patterns go to Kıyas, seeds come back as preregistered hypotheses. That pair can run on its own. When something survives and is worth building, İskele takes it, and İskele's acceptance criteria return to Mizan as entries. ux-mizan hands measured findings both into the backlog and back into the audit.">
+      <svg viewBox="0 0 780 300" role="img" aria-label="Material enters at Mizan — a document or a chat, a repo or legacy code, a project already running, or the output of an earlier Mizan mode — and it can enter at any turn, not only at the start. Mizan and Kıyas exchange in both directions: gaps and refuted patterns go to Kıyas, seeds come back as preregistered hypotheses. That pair can run on its own. When something survives and is worth building, İskele takes it, and İskele's acceptance criteria return to Mizan as entries. ux-mizan hands measured findings both into the backlog and back into the audit.">
         <defs>
           <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
             <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
           </marker>
         </defs>
         <g fill="none" stroke="currentColor" stroke-width="1.4" opacity=".55" marker-end="url(#ar)">
-          <path d="M162,58 H192"/>
+          <path d="M170,58 H192"/>
           <path d="M350,46 H426"/>
           <path d="M426,74 H350"/>
           <path d="M388,90 V176"/>
@@ -120,9 +120,11 @@ lang: en
           <path d="M635,176 V140 H505 V90"/>
         </g>
         <g>
-          <rect x="8" y="30" width="154" height="56" rx="10" fill="none" stroke="currentColor" opacity=".3" stroke-dasharray="4 4"/>
-          <text class="chain-txt" x="85" y="52" text-anchor="middle">a document, a chat,</text>
-          <text class="chain-txt" x="85" y="68" text-anchor="middle">an article, an idea</text>
+          <rect x="0" y="18" width="170" height="80" rx="10" fill="none" stroke="currentColor" opacity=".3" stroke-dasharray="4 4"/>
+          <text class="chain-txt" x="85" y="40" text-anchor="middle">a document or a chat,</text>
+          <text class="chain-txt" x="85" y="56" text-anchor="middle">a repo, legacy code,</text>
+          <text class="chain-txt" x="85" y="72" text-anchor="middle">a running project,</text>
+          <text class="chain-txt" x="85" y="88" text-anchor="middle">an earlier mode&#39;s output</text>
           <rect x="192" y="30" width="158" height="60" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
           <text class="chain-node" x="271" y="66" text-anchor="middle">Mizan</text>
           <rect x="426" y="30" width="150" height="60" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
@@ -134,6 +136,7 @@ lang: en
         </g>
         <g class="chain-txt" text-anchor="middle">
           <text x="388" y="24">gaps · refuted</text>
+          <text x="177" y="44">any turn</text>
           <text x="398" y="112" text-anchor="start">seeds → preregistered</text>
           <text x="398" y="152" text-anchor="start">worth building</text>
           <text x="200" y="152" text-anchor="start">criteria</text>
@@ -143,15 +146,26 @@ lang: en
       </svg>
       <figcaption>Two loops, not one ring. Mizan and Kıyas can go round on their
       own for as long as the thinking needs — İskele is entered when something
-      survives and is worth building, not on the way past.</figcaption>
+      survives and is worth building, not on the way past. The dashed box is not
+      a starting gun: material enters at Mizan on any turn, and what an earlier
+      mode produced is legitimate material for the next one.</figcaption>
     </figure>
 
     <ul class="plain">
       <li><strong>You → Mizan:</strong> the entry, and the one arrow that starts
-      outside the system. Something you already have — an AI conversation, an
-      article, an old note, a rough idea — gets atomized into claims and tiered.
-      What survives is <code>[H]</code>; what does not is recorded rather than
-      deleted.</li>
+      outside the system. Something you already have gets atomized into claims
+      and tiered — an AI conversation, an article, an old note, a rough idea,
+      but equally <strong>a repository, a legacy codebase, a project already
+      under way</strong>: that is what modes 3–5 are for, and in an undocumented
+      project the audit report <em>is</em> the documentation. What an earlier
+      mode produced — a gap map, a bug registry, a gated PRD — re-enters the
+      same way. What survives is <code>[H]</code>; what does not is recorded
+      rather than deleted.</li>
+      <li><strong>The entry is not a one-time event.</strong> The dashed box is
+      not the start of a pipeline: while the loop is turning, a new idea, a new
+      document, a fresh piece of code can enter at Mizan on any turn. The
+      registry is append-only precisely so that late material joins what is
+      already there instead of restarting it.</li>
       <li><strong>Mizan ⇄ Kıyas — the inner loop.</strong> The audit's gap map
       and its refuted entries become Kıyas's brief and its negative constraints;
       Kıyas's surviving seeds come back as preregistered entries, already
@@ -423,14 +437,14 @@ lang: en
     <p class="sub">Araçlar birbirine dosya devreder, düzyazı değil.</p>
 
     <figure class="chain">
-      <svg viewBox="0 0 780 300" role="img" aria-label="Yapılandırılmamış bir girdi — bir doküman, sohbet, makale, ham fikir — Mizan'a girer. Mizan ile Kıyas iki yönde alışveriş eder: boşluklar ve çürütülenler Kıyas'a gider, tohumlar önkayıtlı hipotez olarak geri döner. Bu çift kendi başına dönebilir. Sağ kalan bir şey inşa edilmeye değdiğinde İskele devreye girer ve kabul kriterleri Mizan'a girdi olarak döner. ux-mizan ölçülmüş bulguları hem backlog'a hem denetime verir.">
+      <svg viewBox="0 0 780 300" role="img" aria-label="Malzeme Mizan'a girer — bir doküman ya da sohbet, bir repo ya da legacy kod, hâlihazırda süren bir proje, ya da daha önceki bir Mizan modunun çıktısı — ve yalnızca başta değil, her turda girebilir. Mizan ile Kıyas iki yönde alışveriş eder: boşluklar ve çürütülenler Kıyas'a gider, tohumlar önkayıtlı hipotez olarak geri döner. Bu çift kendi başına dönebilir. Sağ kalan bir şey inşa edilmeye değdiğinde İskele devreye girer ve kabul kriterleri Mizan'a girdi olarak döner. ux-mizan ölçülmüş bulguları hem backlog'a hem denetime verir.">
         <defs>
           <marker id="ar-tr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
             <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
           </marker>
         </defs>
         <g fill="none" stroke="currentColor" stroke-width="1.4" opacity=".55" marker-end="url(#ar-tr)">
-          <path d="M162,58 H192"/>
+          <path d="M170,58 H192"/>
           <path d="M350,46 H426"/>
           <path d="M426,74 H350"/>
           <path d="M388,90 V176"/>
@@ -439,9 +453,11 @@ lang: en
           <path d="M635,176 V140 H505 V90"/>
         </g>
         <g>
-          <rect x="8" y="30" width="154" height="56" rx="10" fill="none" stroke="currentColor" opacity=".3" stroke-dasharray="4 4"/>
-          <text class="chain-txt" x="85" y="52" text-anchor="middle">bir doküman, sohbet,</text>
-          <text class="chain-txt" x="85" y="68" text-anchor="middle">makale, ham fikir</text>
+          <rect x="0" y="18" width="170" height="80" rx="10" fill="none" stroke="currentColor" opacity=".3" stroke-dasharray="4 4"/>
+          <text class="chain-txt" x="85" y="40" text-anchor="middle">doküman, sohbet, fikir,</text>
+          <text class="chain-txt" x="85" y="56" text-anchor="middle">repo, legacy kod,</text>
+          <text class="chain-txt" x="85" y="72" text-anchor="middle">süren bir proje,</text>
+          <text class="chain-txt" x="85" y="88" text-anchor="middle">önceki modun çıktısı</text>
           <rect x="192" y="30" width="158" height="60" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
           <text class="chain-node" x="271" y="66" text-anchor="middle">Mizan</text>
           <rect x="426" y="30" width="150" height="60" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
@@ -453,6 +469,7 @@ lang: en
         </g>
         <g class="chain-txt" text-anchor="middle">
           <text x="388" y="24">boşluklar · çürütülenler</text>
+          <text x="177" y="44">her turda</text>
           <text x="398" y="112" text-anchor="start">tohumlar → önkayıt</text>
           <text x="398" y="152" text-anchor="start">inşa etmeye değer</text>
           <text x="200" y="152" text-anchor="start">kriterler</text>
@@ -462,14 +479,27 @@ lang: en
       </svg>
       <figcaption>Tek halka değil, iki döngü. Mizan ile Kıyas, düşünme ne kadar
       sürerse o kadar kendi aralarında dönebilir — İskele, sağ kalan bir şey inşa
-      edilmeye değdiğinde devreye girer; yol üstünde uğranan bir durak değil.</figcaption>
+      edilmeye değdiğinde devreye girer; yol üstünde uğranan bir durak değil.
+      Kesik çizgili kutu bir başlangıç işareti değildir: malzeme Mizan'a her
+      turda girebilir ve önceki bir modun ürettiği şey bir sonrakinin meşru
+      malzemesidir.</figcaption>
     </figure>
 
     <ul class="plain">
       <li><strong>Siz → Mizan:</strong> giriş, ve sistemin dışından başlayan tek
-      ok. Elinizde zaten olan bir şey — bir YZ sohbeti, bir makale, eski bir
-      not, ham bir fikir — iddialara ayrılır ve katmanlanır. Ayakta kalan
-      <code>[H]</code> olur; kalmayan silinmez, kaydedilir.</li>
+      ok. Elinizde zaten olan bir şey iddialara ayrılır ve katmanlanır — bir YZ
+      sohbeti, bir makale, eski bir not, ham bir fikir, ama aynı ölçüde
+      <strong>bir repo, bir legacy kod tabanı, hâlihazırda süren bir
+      proje</strong>: 3–5. modlar tam bunun için, ve dokümansız bir projede
+      denetim raporunun kendisi <em>dokümantasyondur</em>. Önceki bir modun
+      ürettiği şey — boşluk haritası, bug registry'si, kapıdan geçmiş bir PRD —
+      aynı yoldan yeniden girer. Ayakta kalan <code>[H]</code> olur; kalmayan
+      silinmez, kaydedilir.</li>
+      <li><strong>Giriş tek seferlik değildir.</strong> Kesik çizgili kutu bir
+      hattın başlangıcı değil: döngü dönerken yeni bir fikir, yeni bir doküman,
+      taze bir kod parçası her turda Mizan'a girebilir. Registry'nin
+      yalnızca-eklenir olmasının sebebi tam da bu — sonradan gelen malzeme var
+      olanı sıfırlamaz, ona katılır.</li>
       <li><strong>Mizan ⇄ Kıyas — iç döngü.</strong> Denetimin boşluk haritası
       ve reddedilen kayıtları Kıyas'ın brief'i ve negatif kısıtları olur;
       Kıyas'ın sağ kalan tohumları, registry'nin isteyeceği hakemi zaten
