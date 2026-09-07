@@ -253,9 +253,18 @@ lang: en
       arms, a locked threshold, a stopping rule, and the author's own prediction
       that the result will land in the underpowered band — but nothing has been
       measured. The rate is undefined, not favourable.</li>
-      <li><strong>None of the five seeds has been run.</strong> They are
-      preregistrations. The accumulation of unrun preregistrations is this
-      family's current risk, not a shortage of ideas.</li>
+      <li><strong>One of the five seeds has now been run, and it was
+      refuted.</strong> K-03 — run the pair pass at decoding instead of in
+      the loss — was tested on GSM8K against an equal-compute majority-vote
+      control. The filter cut the contradiction rate of the selected trace by
+      72.5%, far past its threshold, and did not buy accuracy: −3.3 points,
+      confidence interval crossing zero, two answers fixed and four broken.
+      The preregistered condition was a conjunction and the conjunction
+      failed, so the entry is <code>[R]</code>. Its mechanism is worth more
+      than its verdict: internal consistency is not correctness, and a trace
+      that is consistently wrong is the one a consistency filter prefers.
+      The other four remain unrun. The accumulation of unrun preregistrations
+      is still this family's risk.</li>
       <li><strong>No third-party arbiter exists anywhere in the four
       repositories.</strong> Every arbiter class is <code>runtime</code> or
       <code>author</code>. That empty cell is the only place this project could
@@ -506,9 +515,16 @@ lang: en
       kollar, kilitli eşik, durdurma kuralı ve yazarın sonucun güç-yetersiz
       bandında çıkacağına dair kendi tahmini — ama hiçbir şey ölçülmedi. Oran
       elverişli değil, <em>tanımsız</em>.</li>
-      <li><strong>Beş tohumun hiçbiri koşulmadı.</strong> Bunlar önkayıt.
-      Koşulmamış önkayıtların birikmesi bu ailenin şu anki riski; fikir kıtlığı
-      değil.</li>
+      <li><strong>Beş tohumdan biri artık koşuldu ve çürüdü.</strong> K-03 —
+      çift pasını loss yerine dekodlamada koş — GSM8K üzerinde, eşit
+      compute'lu çoğunluk-oyu kontrolüne karşı test edildi. Filtre seçilen
+      izin çelişki oranını %72.5 düşürdü (eşiğin çok üstünde) ve doğruluk
+      kazandırmadı: −3.3 puan, güven aralığı sıfırı kesiyor, iki cevap
+      düzeldi dört cevap bozuldu. Önkayıtlı koşul bir bileşikti ve bileşik
+      sağlanmadı; girdi <code>[R]</code>. Mekanizması hükmünden değerli:
+      iç tutarlılık doğruluk değildir, ve baştan sona tutarlı biçimde yanlış
+      olan iz, tutarlılık filtresinin tercih ettiği izdir. Diğer dördü
+      koşulmadı. Koşulmamış önkayıtların birikmesi hâlâ bu ailenin riski.</li>
       <li><strong>Dört deponun hiçbirinde üçüncü-taraf hakem
       yok.</strong> Her hakem sınıfı ya <code>runtime</code> ya
       <code>author</code>. O boş hücre bu projenin <code>[K]</code>
