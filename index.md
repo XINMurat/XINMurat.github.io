@@ -320,11 +320,14 @@ lang: en
           </tr>
           <tr>
             <td><a href="https://github.com/XINMurat/Mizan/releases/latest">Mizan</a></td>
-            <td><strong>v2.6.0</strong></td>
-            <td>R22: <code>cost_actual</code> — a cost claim names its
-            instrument, window, attribution and comparison arm; an armless claim
-            cannot be <span class="tiers">[K]</span> · the <code>probes</code>
-            block and R19–R21 · R17, R18 · registry schema 1.9</td>
+            <td><strong>v2.7.0</strong></td>
+            <td>R23–R25, all three written from an audit that MISSED things:
+            MERGE reconciles the slice pairs <em>nobody looked at</em>; the
+            auditor's own instruments get calibrated against a known positive
+            and a known negative; a <code>runtime</code> verdict names the
+            artifact it ran against — a stale build reports green, red and a
+            full passing suite with equal confidence · W6: phases can all close
+            while the domain probe was never answered · registry schema 1.10</td>
           </tr>
           <tr>
             <td><a href="https://github.com/XINMurat/Kiyas/releases/latest">Kıyas</a></td>
@@ -675,11 +678,14 @@ lang: en
           </tr>
           <tr>
             <td><a href="https://github.com/XINMurat/Mizan/releases/latest">Mizan</a></td>
-            <td><strong>v2.6.0</strong></td>
-            <td>R22: <code>cost_actual</code> — maliyet iddiası enstrümanını,
-            penceresini, atfını ve karşılaştırma kolunu adlandırır; kolsuz iddia
-            <span class="tiers">[K]</span> olamaz · <code>probes</code> bloğu ve
-            R19–R21 · R17, R18 · registry şeması 1.9</td>
+            <td><strong>v2.7.0</strong></td>
+            <td>R23–R25, üçü de bir şey BULAN değil bir şey KAÇIRAN denetimden
+            doğdu: MERGE artık <em>kimsenin bakmadığı</em> dilim çiftlerini
+            uzlaştırır; denetçinin kendi enstrümanları bilinen bir pozitif ve
+            bilinen bir negatifle kalibre edilir; <code>runtime</code> kararı
+            koştuğu eseri adlandırır — bayat bir derleme yeşili, kırmızıyı ve
+            geçen tam süiti aynı güvenle bildirir · W6: alan probu hiç
+            yanıtlanmadan bütün fazlar kapanabilir · registry şeması 1.10</td>
           </tr>
           <tr>
             <td><a href="https://github.com/XINMurat/Kiyas/releases/latest">Kıyas</a></td>
