@@ -320,7 +320,7 @@ lang: en
           </tr>
           <tr>
             <td><a href="https://github.com/XINMurat/Mizan/releases/latest">Mizan</a></td>
-            <td><strong>v2.8.0</strong></td>
+            <td><strong>v2.8.1</strong></td>
             <td>Mode 7, the security probe, and the first rule in this family
             that refuses to score a passing check as evidence. R26: <em>not
             exploited is not a pass</em> — a failed attempt is one adversary's
@@ -329,7 +329,9 @@ lang: en
             path to the asset promotes. R27 is R19 with the supplier changed,
             because the people who built the thing cannot name the assumption
             they never knew they made · W7: the two boundaries whose far side
-            is not a person on the team · registry schema 1.11</td>
+            is not a person on the team · registry schema 1.11 · v2.8.1
+            declares Mode 6 in the file the agent actually reads, four releases
+            after it started working</td>
           </tr>
           <tr>
             <td><a href="https://github.com/XINMurat/Mizan/releases/tag/v2.7.0">Mizan</a></td>
@@ -691,7 +693,7 @@ lang: en
           </tr>
           <tr>
             <td><a href="https://github.com/XINMurat/Mizan/releases/latest">Mizan</a></td>
-            <td><strong>v2.8.0</strong></td>
+            <td><strong>v2.8.1</strong></td>
             <td>Mod 7, güvenlik probu — ve bu ailede geçen bir kontrolü kanıt
             saymayı reddeden ilk kural. R26: <em>sömürülmemiş olmak geçer not
             değildir</em> — başarısız bir deneme tek bir saldırganın sonucudur,
@@ -700,7 +702,9 @@ lang: en
             gösterilmiş adı konmuş bir kontrol terfi ettirir. R27, tedarikçisi
             değişmiş R19'dur: kimse farkında olmadan yaptığı varsayımı
             adlandıramaz · W7: karşı tarafında ekipten kimse olmayan iki sınır ·
-            registry şeması 1.11</td>
+            registry şeması 1.11 · v2.8.1, Mod 6'yı ajanın gerçekten
+            okuduğu dosyada beyan eder — çalışmaya başlamasından dört sürüm
+            sonra</td>
           </tr>
           <tr>
             <td><a href="https://github.com/XINMurat/Mizan/releases/tag/v2.7.0">Mizan</a></td>
