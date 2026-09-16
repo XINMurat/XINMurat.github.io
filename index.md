@@ -320,6 +320,19 @@ lang: en
           </tr>
           <tr>
             <td><a href="https://github.com/XINMurat/Mizan/releases/latest">Mizan</a></td>
+            <td><strong>v2.8.0</strong></td>
+            <td>Mode 7, the security probe, and the first rule in this family
+            that refuses to score a passing check as evidence. R26: <em>not
+            exploited is not a pass</em> — a failed attempt is one adversary's
+            result and a clean scanner is a statement about its own rule set,
+            so both cap at <code>[KKE]</code>; only a named control on every
+            path to the asset promotes. R27 is R19 with the supplier changed,
+            because the people who built the thing cannot name the assumption
+            they never knew they made · W7: the two boundaries whose far side
+            is not a person on the team · registry schema 1.11</td>
+          </tr>
+          <tr>
+            <td><a href="https://github.com/XINMurat/Mizan/releases/tag/v2.7.0">Mizan</a></td>
             <td><strong>v2.7.0</strong></td>
             <td>R23–R25, all three written from an audit that MISSED things:
             MERGE reconciles the slice pairs <em>nobody looked at</em>; the
@@ -678,6 +691,19 @@ lang: en
           </tr>
           <tr>
             <td><a href="https://github.com/XINMurat/Mizan/releases/latest">Mizan</a></td>
+            <td><strong>v2.8.0</strong></td>
+            <td>Mod 7, güvenlik probu — ve bu ailede geçen bir kontrolü kanıt
+            saymayı reddeden ilk kural. R26: <em>sömürülmemiş olmak geçer not
+            değildir</em> — başarısız bir deneme tek bir saldırganın sonucudur,
+            temiz bir tarayıcı ise kendi kural seti hakkında bir beyandır; ikisi
+            de <code>[KKE]</code> ile sınırlanır, yalnızca varlığa giden her yolda
+            gösterilmiş adı konmuş bir kontrol terfi ettirir. R27, tedarikçisi
+            değişmiş R19'dur: kimse farkında olmadan yaptığı varsayımı
+            adlandıramaz · W7: karşı tarafında ekipten kimse olmayan iki sınır ·
+            registry şeması 1.11</td>
+          </tr>
+          <tr>
+            <td><a href="https://github.com/XINMurat/Mizan/releases/tag/v2.7.0">Mizan</a></td>
             <td><strong>v2.7.0</strong></td>
             <td>R23–R25, üçü de bir şey BULAN değil bir şey KAÇIRAN denetimden
             doğdu: MERGE artık <em>kimsenin bakmadığı</em> dilim çiftlerini
