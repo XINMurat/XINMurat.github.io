@@ -320,18 +320,20 @@ lang: en
           </tr>
           <tr>
             <td><a href="https://github.com/XINMurat/Mizan/releases/latest">Mizan</a></td>
-            <td><strong>v2.8.1</strong></td>
-            <td>Mode 7, the security probe, and the first rule in this family
-            that refuses to score a passing check as evidence. R26: <em>not
-            exploited is not a pass</em> — a failed attempt is one adversary's
-            result and a clean scanner is a statement about its own rule set,
-            so both cap at <code>[KKE]</code>; only a named control on every
-            path to the asset promotes. R27 is R19 with the supplier changed,
-            because the people who built the thing cannot name the assumption
-            they never knew they made · W7: the two boundaries whose far side
-            is not a person on the team · registry schema 1.11 · v2.8.1
-            declares Mode 6 in the file the agent actually reads, four releases
-            after it started working</td>
+            <td><strong>v2.9.0</strong></td>
+            <td>The first rule in this family that doubts the <em>inventory</em>
+            rather than the reading. R28: <em>the audit reads what was written,
+            not what gets produced</em> — slices are cut out of the source tree,
+            which holds exactly what a human typed, so a generated config sits
+            in no slice at all. Six phases, a MERGE, a bug registry and a
+            security probe closed green while a packaging script wrote a BEL
+            character into a shipped <code>web.config</code>: source correct,
+            output corrupt, and reading the script twice could not find it · W8
+            asks whether an arbiter can return a verdict <em>at all</em>, after
+            a suite sat twenty-five minutes at zero CPU — neither failing nor
+            passing — and was about to be reported as verified · checklist 15
+            (the file nobody wrote) and 16 (the value you checked is not the
+            value you used) · registry schema 1.12</td>
           </tr>
           <tr>
             <td><a href="https://github.com/XINMurat/Mizan/releases/tag/v2.7.0">Mizan</a></td>
@@ -693,18 +695,20 @@ lang: en
           </tr>
           <tr>
             <td><a href="https://github.com/XINMurat/Mizan/releases/latest">Mizan</a></td>
-            <td><strong>v2.8.1</strong></td>
-            <td>Mod 7, güvenlik probu — ve bu ailede geçen bir kontrolü kanıt
-            saymayı reddeden ilk kural. R26: <em>sömürülmemiş olmak geçer not
-            değildir</em> — başarısız bir deneme tek bir saldırganın sonucudur,
-            temiz bir tarayıcı ise kendi kural seti hakkında bir beyandır; ikisi
-            de <code>[KKE]</code> ile sınırlanır, yalnızca varlığa giden her yolda
-            gösterilmiş adı konmuş bir kontrol terfi ettirir. R27, tedarikçisi
-            değişmiş R19'dur: kimse farkında olmadan yaptığı varsayımı
-            adlandıramaz · W7: karşı tarafında ekipten kimse olmayan iki sınır ·
-            registry şeması 1.11 · v2.8.1, Mod 6'yı ajanın gerçekten
-            okuduğu dosyada beyan eder — çalışmaya başlamasından dört sürüm
-            sonra</td>
+            <td><strong>v2.9.0</strong></td>
+            <td>Bu ailede okumadan değil <em>envanterden</em> şüphelenen ilk
+            kural. R28: <em>denetim yazılanı okur, üretileni değil</em> —
+            dilimler kaynak ağacından kesilir, kaynak ağacı tam olarak bir
+            insanın yazdığını tutar; üretilen bir yapılandırma hiçbir dilimde
+            değildir. Altı faz, MERGE, hata registry'si ve güvenlik probu yeşil
+            kapandı; bu sırada bir paketleme betiği gönderilen
+            <code>web.config</code>'e ZİL karakteri yazıyordu: kaynak doğru,
+            çıktı bozuk — ve betiği iki kez okumak bunu bulamazdı · W8, bir
+            hakemin <em>hiç</em> karar verebilip veremediğini sorar: bir süit
+            yirmi beş dakika sıfır CPU'da oturdu, ne kırmızı ne yeşil, ve
+            "doğrulandı" diye raporlanmak üzereydi · kontrol listesi 15
+            (kimsenin yazmadığı dosya) ve 16 (denetlediğin değer, kullandığın
+            değer değil) · registry şeması 1.12</td>
           </tr>
           <tr>
             <td><a href="https://github.com/XINMurat/Mizan/releases/tag/v2.7.0">Mizan</a></td>
