@@ -47,6 +47,8 @@ versions it fires on. A rule that has never fired is a question for review,
 not a verdict. The first run's answer is itself a finding: across 19 pushed
 versions of real registries no rule fires, because violations are fixed before
 the push and leave no trace in git. History cannot tell a sleeping rule from a
-working one; counting pre-push failures needs the hook or CI to record them.
+working one, so the pre-commit hooks now log each block locally, and
+`python tools/rule_hits.py export` in any of the four repositories writes the
+counts (rule codes only) to `rule-hits/`, which this report reads.
 
 Content is CC BY 4.0.
