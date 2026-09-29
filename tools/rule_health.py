@@ -114,13 +114,33 @@ def main() -> int:
         r["never_fired"] = sorted(defined - set(r["fired"]), key=lambda c: int(c[1:]))
         r["fired"] = dict(sorted(r["fired"].items(), key=lambda kv: -kv[1]))
 
+    # Pre-push blocks, exported by tools/rule_hits.py from each clone's hook
+    # log. History cannot see these; they are the only record of a rule
+    # actually stopping something.
+    hits = collections.Counter()
+    exports = 0
+    for repo in REPOS:
+        d = os.path.join(a.root, repo, "rule-hits")
+        for name in sorted(os.listdir(d)) if os.path.isdir(d) else []:
+            if name.endswith(".json"):
+                data = json.load(open(os.path.join(d, name), encoding="utf-8"))
+                hits.update(data.get("violations", {}))
+                exports += 1
+    report["pre_push"] = {"exports": exports, "violations": dict(hits.most_common())}
+
     lines = ["# Rule health", ""]
     for repo, r in report.items():
+        if repo == "pre_push":
+            continue
         lines.append(f"## {repo}: {r['versions']} historical versions of {r['files']} file(s)")
         if r["fired"]:
             lines.append("fired (versions): " + ", ".join(f"{k} {v}" for k, v in r["fired"].items()))
         lines.append(f"never fired ({len(r['never_fired'])}): " + (", ".join(r["never_fired"]) or "—"))
         lines.append("")
+    pp = report["pre_push"]
+    lines.append(f"## Pre-push blocks (hook logs, {pp['exports']} export(s))")
+    lines.append(", ".join(f"{k} {v}" for k, v in pp["violations"].items()) or "none exported yet")
+    lines.append("")
     lines.append("A never-fired rule is a question, not a verdict: guarding something "
                  "that never happens, or blind to it. Versions never pushed are invisible here.")
     text = "\n".join(lines)
