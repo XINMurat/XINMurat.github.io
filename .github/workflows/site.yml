@@ -54,3 +54,29 @@ jobs:
           python-version: "3.12"
       - name: The four repositories share one copy of their shared tools
         run: python tools/check_family_tools.py
+
+  rule-health:
+    # Which R/G/U rules have ever fired on what the family actually wrote.
+    # A report, not a gate: it never fails the run. Full history is needed,
+    # so each repository is cloned with fetch-depth 0.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet pyyaml
+      - name: Clone the four repositories with full history
+        run: |
+          set -e
+          mkdir -p /tmp/family
+          for r in Mizan Kiyas Iskele ux-mizan; do
+            git clone --quiet --no-single-branch https://github.com/XINMurat/$r.git /tmp/family/$r
+          done
+      - name: Rule health
+        run: python tools/rule_health.py --root /tmp/family --json /tmp/rule-health.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rule-health
+          path: /tmp/rule-health.json
+          retention-days: 90
