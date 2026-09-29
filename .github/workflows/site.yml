@@ -44,3 +44,13 @@ jobs:
           fi
           cp /tmp/index-backup index.md
           echo "ok -- a stale row is caught"
+
+  family-tools:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: The four repositories share one copy of their shared tools
+        run: python tools/check_family_tools.py

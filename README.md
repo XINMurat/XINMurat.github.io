@@ -35,4 +35,9 @@ The **Current releases** table in `index.md` is typed by hand, so CI checks it:
 with the tag GitHub reports, on every push and once a day — a release in one of
 the four repositories changes the answer without touching this one.
 
+The same daily run compares the four repositories' shared tools
+(`tools/check_family_tools.py`): each repository checks its own copies against
+`tools/shared-tools.json`, and this page checks that the four manifests — and
+the files they list — still agree on `main`.
+
 Content is CC BY 4.0.
