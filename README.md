@@ -51,4 +51,11 @@ working one, so the pre-commit hooks now log each block locally, and
 `python tools/rule_hits.py export` in any of the four repositories writes the
 counts (rule codes only) to `rule-hits/`, which this report reads.
 
+Projects that use the skills are counted too, when they can be found: the
+daily job reads `rule-hits/` from every fork of the four repositories and from
+any repository tagged `mizan-rule-hits`. Exports carry the validator's hash, so
+counts from a copy that was never updated are not mixed with today's rules.
+Nobody is listed and a clone that did neither is invisible; the consumer count
+in the report is a floor.
+
 Content is CC BY 4.0.

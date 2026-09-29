@@ -74,7 +74,9 @@ jobs:
             git clone --quiet --no-single-branch https://github.com/XINMurat/$r.git /tmp/family/$r
           done
       - name: Rule health
-        run: python tools/rule_health.py --root /tmp/family --json /tmp/rule-health.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python tools/rule_health.py --root /tmp/family --consumers --json /tmp/rule-health.json
       - uses: actions/upload-artifact@v4
         with:
           name: rule-health
