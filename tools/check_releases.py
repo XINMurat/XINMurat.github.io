@@ -21,6 +21,8 @@ import json
 import os
 import re
 import sys
+import time
+import urllib.error
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -38,8 +40,19 @@ def latest(owner: str, repo: str) -> str:
     token = os.environ.get("GITHUB_TOKEN")
     if token:
         req.add_header("Authorization", f"Bearer {token}")
-    with urllib.request.urlopen(req, timeout=20) as resp:
-        return json.load(resp)["tag_name"]
+    # Retried: a dropped connection is not a disagreement with the table.
+    for attempt in range(1, 4):
+        try:
+            with urllib.request.urlopen(req, timeout=20) as resp:
+                return json.load(resp)["tag_name"]
+        except urllib.error.HTTPError as exc:
+            if attempt == 3 or exc.code < 500:
+                raise
+        except (urllib.error.URLError, ConnectionError, TimeoutError):
+            if attempt == 3:
+                raise
+        time.sleep(2 * attempt)
+    raise RuntimeError("unreachable")
 
 
 def main() -> int:

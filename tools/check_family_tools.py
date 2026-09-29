@@ -20,6 +20,7 @@ from __future__ import annotations
 import hashlib
 import json
 import sys
+import time
 import urllib.error
 import urllib.request
 
@@ -28,14 +29,24 @@ REPOS = ["Mizan", "Kiyas", "Iskele", "ux-mizan"]
 RAW = "https://raw.githubusercontent.com/%s/%s/main/%s"
 
 
-def fetch(repo: str, path: str) -> bytes | None:
-    try:
-        with urllib.request.urlopen(RAW % (OWNER, repo, path), timeout=20) as resp:
-            return resp.read()
-    except urllib.error.HTTPError as exc:
-        if exc.code == 404:
-            return None
-        raise
+def fetch(repo: str, path: str, tries: int = 3) -> bytes | None:
+    # A dropped connection is not a finding. Without the retry, one transient
+    # disconnect turned the daily run red with a traceback that said nothing
+    # about the tools. A 404 is an answer and is not retried.
+    for attempt in range(1, tries + 1):
+        try:
+            with urllib.request.urlopen(RAW % (OWNER, repo, path), timeout=20) as resp:
+                return resp.read()
+        except urllib.error.HTTPError as exc:
+            if exc.code == 404:
+                return None
+            if attempt == tries or exc.code < 500:
+                raise
+        except (urllib.error.URLError, ConnectionError, TimeoutError):
+            if attempt == tries:
+                raise
+        time.sleep(2 * attempt)
+    return None
 
 
 def main() -> int:
