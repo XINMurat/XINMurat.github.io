@@ -40,4 +40,13 @@ The same daily run compares the four repositories' shared tools
 `tools/shared-tools.json`, and this page checks that the four manifests — and
 the files they list — still agree on `main`.
 
+The daily run also reports **rule health** (`tools/rule_health.py`): every
+historical version of every registry and seed batch in the four repositories
+is re-validated with today's validators, and each rule is counted by how many
+versions it fires on. A rule that has never fired is a question for review,
+not a verdict. The first run's answer is itself a finding: across 19 pushed
+versions of real registries no rule fires, because violations are fixed before
+the push and leave no trace in git. History cannot tell a sleeping rule from a
+working one; counting pre-push failures needs the hook or CI to record them.
+
 Content is CC BY 4.0.
