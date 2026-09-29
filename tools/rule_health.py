@@ -58,10 +58,80 @@ def defined_codes(validator: str, prefix: str) -> set[str]:
     return set(re.findall(r'"(%s\d+)[_"]' % prefix, src))
 
 
+OWNER = "XINMurat"
+TOPIC = "mizan-rule-hits"  # a consumer who wants to be counted adds this topic
+
+
+def _api(url: str):
+    import urllib.request
+    req = urllib.request.Request(url, headers={"Accept": "application/vnd.github+json"})
+    tok = os.environ.get("GITHUB_TOKEN")
+    if tok:
+        req.add_header("Authorization", f"Bearer {tok}")
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.load(r)
+
+
+def consumers() -> dict:
+    """Rule-hit exports committed by projects that USE the skills.
+
+    Nobody is listed: the repositories are public and anyone can clone them.
+    Two ways a consumer becomes visible, both theirs to take: a GitHub fork
+    (the fork graph is public), or the repository topic TOPIC on a project
+    that only cloned. Either way only rule-hits/*.json is read, which holds
+    rule codes and counts, nothing else. A consumer that neither forked nor
+    tagged stays invisible, and the report says how many were seen, never
+    'the field'.
+    """
+    found, errors = set(), 0
+    for repo in REPOS:
+        page = 1
+        while True:
+            try:
+                batch = _api(f"https://api.github.com/repos/{OWNER}/{repo}/forks"
+                             f"?per_page=100&page={page}")
+            except Exception:
+                errors += 1
+                break
+            found |= {f["full_name"] for f in batch}
+            if len(batch) < 100:
+                break
+            page += 1
+    try:
+        found |= {r["full_name"] for r in _api(
+            f"https://api.github.com/search/repositories?q=topic:{TOPIC}&per_page=100")["items"]}
+    except Exception:
+        errors += 1
+    total, by_validator, reporting = collections.Counter(), {}, 0
+    for full in sorted(found):
+        try:
+            listing = _api(f"https://api.github.com/repos/{full}/contents/rule-hits")
+        except Exception:
+            continue  # no rule-hits/ directory: the common case, not an error
+        files = [f for f in listing if isinstance(f, dict) and f.get("name", "").endswith(".json")]
+        if files:
+            reporting += 1
+        for f in files:
+            try:
+                data = _api(f["download_url"])
+            except Exception:
+                errors += 1
+                continue
+            total.update(data.get("violations", {}))
+            for key, b in (data.get("by_validator") or {"unversioned": data}).items():
+                by_validator.setdefault(key, collections.Counter()).update(b.get("violations", {}))
+    return {"repos_seen": len(found), "repos_reporting": reporting, "api_errors": errors,
+            "violations": dict(total.most_common()),
+            "by_validator": {k: dict(v.most_common()) for k, v in by_validator.items()}}
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--root", required=True)
     ap.add_argument("--json")
+    ap.add_argument("--consumers", action="store_true",
+                    help="also read rule-hits/ from forks and from repositories tagged "
+                         f"'{TOPIC}' (GitHub API; GITHUB_TOKEN raises the rate limit)")
     a = ap.parse_args()
 
     validators = {}
@@ -141,6 +211,16 @@ def main() -> int:
     lines.append(f"## Pre-push blocks (hook logs, {pp['exports']} export(s))")
     lines.append(", ".join(f"{k} {v}" for k, v in pp["violations"].items()) or "none exported yet")
     lines.append("")
+    if a.consumers:
+        c = report["consumers"] = consumers()
+        lines.append(f"## Consumers ({c['repos_reporting']} of {c['repos_seen']} visible "
+                     f"repositories report; API errors {c['api_errors']})")
+        lines.append(", ".join(f"{k} {v}" for k, v in c["violations"].items()) or "none reported yet")
+        for key, v in sorted(c["by_validator"].items()):
+            lines.append(f"- {key}: " + ", ".join(f"{k} {n}" for k, n in v.items()))
+        lines.append("Only forks and tagged repositories are visible; a clone that did "
+                     "neither is not counted, so this is a floor, not the field.")
+        lines.append("")
     lines.append("A never-fired rule is a question, not a verdict: guarding something "
                  "that never happens, or blind to it. Versions never pushed are invisible here.")
     text = "\n".join(lines)
