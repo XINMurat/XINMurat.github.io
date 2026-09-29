@@ -1,0 +1,46 @@
+name: Site checks
+
+on:
+  push:
+  pull_request:
+  # A release in any of the four repositories changes what "latest" means
+  # without touching this one, so the table is also re-read daily.
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  release-table:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: The release table says what GitHub Releases says
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python tools/check_releases.py
+
+      - name: Self-test — a stale row is caught
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          cp index.md /tmp/index-backup
+          # Rewrite the first version shown beside a /releases/latest link.
+          python - <<'PY'
+          import re, io
+          t = io.open("index.md", encoding="utf-8").read()
+          t = re.sub(r'(/releases/latest">[^<]*</a></td>\s*<td><strong>)[^<]+', r'\g<1>v0.0.1', t, count=1)
+          io.open("index.md", "w", encoding="utf-8").write(t)
+          PY
+          if python tools/check_releases.py; then
+            cp /tmp/index-backup index.md
+            echo "FAIL: a stale version went unnoticed" >&2; exit 1
+          fi
+          cp /tmp/index-backup index.md
+          echo "ok -- a stale row is caught"

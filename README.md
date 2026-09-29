@@ -30,4 +30,9 @@ to override. The language toggle defaults to English, remembers a choice in
 | Kıyas | generates | [Kiyas](https://github.com/XINMurat/Kiyas) | [docs](https://xinmurat.github.io/Kiyas/) |
 | ux-mizan | measures experience | [ux-mizan](https://github.com/XINMurat/ux-mizan) | [docs](https://xinmurat.github.io/ux-mizan/) |
 
+The **Current releases** table in `index.md` is typed by hand, so CI checks it:
+`tools/check_releases.py` compares every row that links to `/releases/latest`
+with the tag GitHub reports, on every push and once a day — a release in one of
+the four repositories changes the answer without touching this one.
+
 Content is CC BY 4.0.

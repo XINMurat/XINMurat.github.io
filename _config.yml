@@ -10,3 +10,8 @@ lang: en
 # No `plugins:` key either: setting one REPLACES the GitHub Pages default set
 # rather than adding to it, and those defaults are what make ordinary Markdown
 # behave the way every page here assumes.
+
+# Repository tooling, not pages. Jekyll would otherwise publish the checker
+# as a static file next to the site.
+exclude:
+  - tools/
