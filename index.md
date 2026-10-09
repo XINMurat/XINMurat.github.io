@@ -315,12 +315,12 @@ lang: en
         <tbody>
           <tr>
             <td><a href="https://github.com/XINMurat/Iskele/releases/latest">İskele</a></td>
-            <td><strong>v1.5.0</strong></td>
-            <td>The expectation delta: a preregistered estimate against measured
-            effort, with <code>estimate_basis</code> deciding what the number may
-            be called · unit cost with two denominators ·
-            <code>session_cost.py</code> · the pair pass (<code>Cift</code> sheet)
-            · the ADR log</td>
+            <td><strong>v1.6.0</strong></td>
+            <td>English report labels: <code>"report_lang": "en"</code> and an
+            English template, Turkish output byte-for-byte unchanged ·
+            <code>iskele_results.py</code> writes completed tasks back into the
+            Mizan registry as results · v1.5: the expectation delta, unit cost
+            with two denominators, the pair pass</td>
           </tr>
           <tr>
             <td><a href="https://github.com/XINMurat/Mizan/releases/latest">Mizan</a></td>
@@ -704,12 +704,12 @@ lang: en
         <tbody>
           <tr>
             <td><a href="https://github.com/XINMurat/Iskele/releases/latest">İskele</a></td>
-            <td><strong>v1.5.0</strong></td>
-            <td>Beklenti sapması: önkayıtlı tahmine karşı ölçülmüş efor,
-            <code>estimate_basis</code> sayının ne olarak adlandırılabileceğine
-            karar verir · iki paydalı birim maliyet ·
-            <code>session_cost.py</code> · çift pası (<code>Cift</code> sekmesi)
-            · ADR defteri</td>
+            <td><strong>v1.6.0</strong></td>
+            <td>İngilizce rapor etiketleri: <code>"report_lang": "en"</code> ve
+            İngilizce şablon; Türkçe çıktı bayt bayt aynı ·
+            <code>iskele_results.py</code> tamamlanan görevleri Mizan
+            registry'sine sonuç olarak geri yazar · v1.5: beklenti sapması, iki
+            paydalı birim maliyet, çift pası</td>
           </tr>
           <tr>
             <td><a href="https://github.com/XINMurat/Mizan/releases/latest">Mizan</a></td>
