@@ -382,6 +382,13 @@ lang: en
       folder into <code>~/.claude/skills/</code>. The path must end
       <code>~/.claude/skills/&lt;name&gt;/SKILL.md</code> — the most common
       mistake is a doubly nested folder.</li>
+      <li><strong>Other agents (untested):</strong> each skill is a plain
+      <code>SKILL.md</code> folder in the open skill format, so agents that
+      read that format — Cursor, Codex CLI, GitHub Copilot, Gemini CLI and
+      others — are <em>expected</em> to load it from their own skills folder.
+      None of them has been tried. The portability that <em>has</em> been
+      tested is across Claude hosts; elsewhere, treat it as a hypothesis and
+      open an issue with what you saw.</li>
     </ul>
     <p class="note"><strong>You do not need to configure your assistant for this
     to work.</strong> No custom instructions, no system prompt, no house style.
@@ -761,6 +768,13 @@ lang: en
       <code>~/.claude/skills/</code> içine kopyalayın. Yol
       <code>~/.claude/skills/&lt;ad&gt;/SKILL.md</code> ile bitmeli — en sık hata
       çift iç içe klasördür.</li>
+      <li><strong>Diğer ajanlar (denenmedi):</strong> her skill, açık skill
+      formatında düz bir <code>SKILL.md</code> klasörüdür; bu yüzden bu formatı
+      okuyan ajanların — Cursor, Codex CLI, GitHub Copilot, Gemini CLI ve
+      diğerleri — onu kendi skills klasöründen yüklemesi <em>beklenir</em>.
+      Hiçbiri denenmedi. <em>Test edilmiş</em> taşınabilirlik Claude
+      ortamları arasındadır; başka yerde bunu bir hipotez olarak ele alın ve
+      gördüğünüzü bir issue olarak açın.</li>
     </ul>
     <p class="note"><strong>Bunun çalışması için asistanınızı yapılandırmanız
     gerekmez.</strong> Özel talimat yok, sistem promptu yok, ev stili yok. Bir
