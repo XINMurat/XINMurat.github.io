@@ -90,6 +90,10 @@ lang: en
         <p class="key"><em>A model cannot measure UX by reading code.</em> It can
         audit structural conformance and build the measuring rig; the evidence
         comes from real users.</p>
+        <p><strong>Status: v0.6 <code>[H]</code> / <code>[KKE]</code>.</strong>
+        Younger than the other three. One self-validation run has tested the
+        Layer-A scripts and refuted one design decision; the gates, the
+        walkthrough and every behavioural metric are still untested.</p>
         <p class="links"><a href="https://xinmurat.github.io/ux-mizan/">docs</a> ·
         <a href="https://github.com/XINMurat/ux-mizan">repository</a></p>
       </article>
@@ -464,6 +468,10 @@ lang: en
         <p class="key"><em>Bir model koda bakarak UX'i ölçemez.</em> Yapısal
         uygunluğu denetleyebilir ve ölçüm düzeneğini kurabilir; kanıtı gerçek
         kullanıcı üretir.</p>
+        <p><strong>Statü: v0.6 <code>[H]</code> / <code>[KKE]</code>.</strong>
+        Diğer üçünden genç. Bir öz-doğrulama koşusu Katman-A script'lerini test
+        etti ve bir tasarım kararını çürüttü; kapılar, walkthrough ve
+        davranışsal metriklerin hiçbiri henüz test edilmedi.</p>
         <p class="links"><a href="https://xinmurat.github.io/ux-mizan/">doküman</a> ·
         <a href="https://github.com/XINMurat/ux-mizan">depo</a></p>
       </article>
