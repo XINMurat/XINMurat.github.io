@@ -90,7 +90,7 @@ lang: en
         <p class="key"><em>A model cannot measure UX by reading code.</em> It can
         audit structural conformance and build the measuring rig; the evidence
         comes from real users.</p>
-        <p><strong>Status: v0.6 <code>[H]</code> / <code>[KKE]</code>.</strong>
+        <p><strong>Status: v0.7 <code>[H]</code> / <code>[KKE]</code>.</strong>
         Younger than the other three. One self-validation run has tested the
         Layer-A scripts and refuted one design decision; the gates, the
         walkthrough and every behavioural metric are still untested.</p>
@@ -352,17 +352,20 @@ lang: en
           </tr>
           <tr>
             <td><a href="https://github.com/XINMurat/Kiyas/releases/latest">Kıyas</a></td>
-            <td><strong>v1.4.0</strong></td>
-            <td>G14: the batch records what it cost — and cost per seed is
-            deliberately not made easy; divide by surviving seeds instead · G13
-            the pair pass · G12</td>
+            <td><strong>v1.5.0</strong></td>
+            <td>G15/W7: a warning can be accepted in the data, with a reason —
+            so <code>--strict</code> stops forcing tier edits — and an
+            acceptance whose warning no longer fires is flagged · W6: a sweep
+            against a partial refuted-patterns export may say "no match found",
+            never "clear" · rule pairs, all 50 codes isolated</td>
           </tr>
           <tr>
             <td><a href="https://github.com/XINMurat/ux-mizan/releases/latest">ux-mizan</a></td>
-            <td><strong>v0.6</strong></td>
-            <td>U14: the audit records its own cost, kept apart from every
-            finding's tier — cost per finding refused · U13 the conjunction
-            finding · U11/U12</td>
+            <td><strong>v0.7</strong></td>
+            <td>No rule change. <code>ux_to_backlog.py</code>: a confirmed
+            finding becomes a fix task, an unmeasured one a measure task ·
+            lostness ends the task at the first success screen · an empty scan
+            exits 2 instead of reading like a clean app</td>
           </tr>
         </tbody>
       </table>
@@ -475,7 +478,7 @@ lang: en
         <p class="key"><em>Bir model koda bakarak UX'i ölçemez.</em> Yapısal
         uygunluğu denetleyebilir ve ölçüm düzeneğini kurabilir; kanıtı gerçek
         kullanıcı üretir.</p>
-        <p><strong>Statü: v0.6 <code>[H]</code> / <code>[KKE]</code>.</strong>
+        <p><strong>Statü: v0.7 <code>[H]</code> / <code>[KKE]</code>.</strong>
         Diğer üçünden genç. Bir öz-doğrulama koşusu Katman-A script'lerini test
         etti ve bir tasarım kararını çürüttü; kapılar, walkthrough ve
         davranışsal metriklerin hiçbiri henüz test edilmedi.</p>
@@ -738,17 +741,20 @@ lang: en
           </tr>
           <tr>
             <td><a href="https://github.com/XINMurat/Kiyas/releases/latest">Kıyas</a></td>
-            <td><strong>v1.4.0</strong></td>
-            <td>G14: parti ne harcadığını kaydeder — ve tohum başına maliyet
-            bilerek kolaylaştırılmaz; onun yerine hayatta kalan tohuma bölünür ·
-            G13 çift pası · G12</td>
+            <td><strong>v1.5.0</strong></td>
+            <td>G15/W7: bir uyarı veride, gerekçesiyle kabul edilebilir — böylece
+            <code>--strict</code> katman düzenlemeye zorlamaz — ve uyarısı artık
+            ateşlenmeyen bir kabul işaretlenir · W6: kısmi bir çürütülmüş-desen
+            dökümüne karşı tarama "eşleşme bulunmadı" diyebilir, asla "temiz"
+            diyemez · kural çiftleri, 50 kodun hepsi ayrışıyor</td>
           </tr>
           <tr>
             <td><a href="https://github.com/XINMurat/ux-mizan/releases/latest">ux-mizan</a></td>
-            <td><strong>v0.6</strong></td>
-            <td>U14: denetim kendi maliyetini kaydeder, her bulgunun katmanından
-            ayrı tutularak — bulgu başına maliyet reddedilir · U13 bileşim
-            bulgusu · U11/U12</td>
+            <td><strong>v0.7</strong></td>
+            <td>Kural değişikliği yok. <code>ux_to_backlog.py</code>:
+            doğrulanmış bulgu düzeltme görevine, ölçülmemiş bulgu ölçüm görevine
+            dönüşür · lostness görevi ilk başarı ekranında bitirir · boş bir
+            tarama temiz bir uygulama gibi okunmak yerine çıkış 2 verir</td>
           </tr>
         </tbody>
       </table>
