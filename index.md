@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Four verbs — İskele · Mizan · Kıyas · ux-mizan"
-description: "Four Claude skills that keep each other honest: one builds the structure, one weighs the claims, one generates the candidates, one measures the experience."
+title: "Five verbs — İskele · Mizan · Kıyas · ux-mizan · Röntgen"
+description: "Five Claude skills that keep each other honest: one builds the structure, one weighs the claims, one generates the candidates, one measures the experience, one maps what already exists."
 lang: en
 ---
 
@@ -17,18 +17,20 @@ lang: en
 
 <section class="hero">
   <div class="wrap">
-    <h1>Four verbs</h1>
-    <p class="lede">Four Claude skills that keep each other honest. The verbs are
+    <h1>Five verbs</h1>
+    <p class="lede">Five Claude skills that keep each other honest. The verbs are
     kept apart on purpose: one builds the structure, one weighs the claims, one
-    generates the candidates, one measures the experience. A conflated verb
+    generates the candidates, one measures the experience, one maps what already
+    exists. A conflated verb
     produces a single tool that does none of them well.</p>
     <ul class="verbs">
       <li><b>İskele</b> builds</li>
       <li><b>Mizan</b> weighs</li>
       <li><b>Kıyas</b> generates</li>
       <li><b>ux-mizan</b> measures experience</li>
+      <li><b>Röntgen</b> maps</li>
     </ul>
-    <p class="canon">This page is the family's canonical description; the four
+    <p class="canon">This page is the family's canonical description; the
     repositories point here rather than each carrying a copy that goes stale on
     its own.</p>
   </div>
@@ -96,6 +98,27 @@ lang: en
         walkthrough and every behavioural metric are still untested.</p>
         <p class="links"><a href="https://xinmurat.github.io/ux-mizan/">docs</a> ·
         <a href="https://github.com/XINMurat/ux-mizan">repository</a></p>
+      </article>
+
+      <article class="card">
+        <span class="verb">maps</span>
+        <h3>Röntgen</h3>
+        <p>Maps a codebase that already exists and writes the documents that make
+        it understandable — reading order, architecture, module notes, flows,
+        glossary, risks — with <strong>every sentence tied to a source
+        line</strong>. It measures before it reads: dependencies resolved through
+        each language's own imports and package manifests, hotspots, blind spots,
+        data stores.</p>
+        <p class="key"><em>A map that does not say how much ground it covers reads
+        as a map of everything</em> — so the coverage is computed, and a second
+        reader who did not write the documents checks a sample before delivery.</p>
+        <p><strong>Status: draft 0.6, not yet released.</strong> Compared with
+        sessions without it, each architecture document removed from the copy: on a
+        Rust and a Go repository (~100k lines each) it covered more of that
+        document (11.5 vs 4.5–6 and 7 vs 2 of 14 points) at equal accuracy in
+        blind checks; on a small C# library it covered less. It reads 1–2% of a
+        large codebase and says so.</p>
+        <p class="links">repository not yet public</p>
       </article>
 
     </div>
@@ -196,6 +219,12 @@ lang: en
       goes to İskele with its own acceptance criteria; the second re-enters the
       inner loop — as an entry for Mizan when it needs tiering, or as the brief
       for Kıyas when the question is <em>why</em> users do that.</li>
+      <li><strong>Röntgen → İskele and Mizan.</strong> Röntgen is an entry for an
+      existing codebase: <code>devir.py</code> turns its measurement into İskele
+      backlog tasks with acceptance criteria and a review baseline, and the
+      sentences its second reader did not accept into post-hoc Mizan entries whose
+      arbiter is the cited line. Not drawn above yet: the diagram shows the four
+      released skills.</li>
     </ul>
   </div>
 </section>
@@ -203,7 +232,11 @@ lang: en
 <section class="block">
   <div class="wrap">
     <h2>The shared constants</h2>
-    <p class="sub">The same few rules in all four — and what holds them together.</p>
+    <p class="sub">The same few rules in all four — and what holds them together.
+    Röntgen, still a draft, carries the tiers (<code>[K]</code>/<code>[H]</code>),
+    a named arbiter (the second reader), script-carried rules and a preregistered
+    token budget in CI; it keeps no registry of its own, so append-only and cost
+    records are not claimed for it.</p>
     <div class="tablewrap">
       <table>
         <thead><tr><th>Constant</th><th>What it means</th></tr></thead>
@@ -367,6 +400,14 @@ lang: en
             lostness ends the task at the first success screen · an empty scan
             exits 2 instead of reading like a clean app</td>
           </tr>
+          <tr>
+            <td>Röntgen</td>
+            <td><strong>draft 0.6</strong></td>
+            <td>Not released. Manifests (Cargo, npm, .NET, Python, Go, Maven,
+            Gradle) and language modules for Rust, Go, Java/Kotlin and a language the
+            project defines itself · second reader as a delivery gate · session log ·
+            reports in Turkish or English</td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -406,18 +447,19 @@ lang: en
 
 <section class="hero">
   <div class="wrap">
-    <h1>Dört fiil</h1>
-    <p class="lede">Birbirini dürüst tutan dört Claude skill'i. Fiiller bilinçli
+    <h1>Beş fiil</h1>
+    <p class="lede">Birbirini dürüst tutan beş Claude skill'i. Fiiller bilinçli
     olarak ayrıdır: biri yapıyı kurar, biri iddiaları tartar, biri adayları
-    üretir, biri deneyimi ölçer. Karıştırılan fiil, hiçbirini iyi yapmayan tek
+    üretir, biri deneyimi ölçer, biri var olanın haritasını çıkarır. Karıştırılan fiil, hiçbirini iyi yapmayan tek
     bir araç üretir.</p>
     <ul class="verbs">
       <li><b>İskele</b> kurar</li>
       <li><b>Mizan</b> tartar</li>
       <li><b>Kıyas</b> üretir</li>
       <li><b>ux-mizan</b> deneyimi ölçer</li>
+      <li><b>Röntgen</b> haritalar</li>
     </ul>
-    <p class="canon">Bu sayfa ailenin kanonik tanımıdır; dört depo, her biri
+    <p class="canon">Bu sayfa ailenin kanonik tanımıdır; depolar, her biri
     kendi başına bayatlayacak bir kopya taşımak yerine buraya işaret eder.</p>
   </div>
 </section>
@@ -484,6 +526,27 @@ lang: en
         davranışsal metriklerin hiçbiri henüz test edilmedi.</p>
         <p class="links"><a href="https://xinmurat.github.io/ux-mizan/">doküman</a> ·
         <a href="https://github.com/XINMurat/ux-mizan">depo</a></p>
+      </article>
+
+      <article class="card">
+        <span class="verb">haritalar</span>
+        <h3>Röntgen</h3>
+        <p>Var olan bir kod tabanının haritasını çıkarır ve onu anlaşılır kılan
+        belgeleri yazar — okuma sırası, mimari, modül notları, akışlar, sözlük,
+        riskler — <strong>her cümle bir kaynak satırına bağlı</strong>. Okumadan
+        önce ölçer: her dilin kendi import'ları ve paket bildirimleri üzerinden
+        çözülen bağımlılıklar, sıcak noktalar, kör noktalar, veri depoları.</p>
+        <p class="key"><em>Ne kadar alanı kapsadığını söylemeyen bir harita,
+        her şeyin haritası gibi okunur</em> — bu yüzden kapsam hesaplanır ve
+        teslimden önce belgeleri yazmamış bir ikinci okuyucu bir örneklemi
+        denetler.</p>
+        <p><strong>Statü: taslak 0.6, henüz yayımlanmadı.</strong> Onsuz çalışan
+        oturumlarla, mimari belgesi kopyadan çıkarılmış depolarda karşılaştırıldı:
+        birer Rust ve Go deposunda (her biri ~100 bin satır) o belgeyi daha geniş
+        kapsadı (14 maddeden 11,5'e karşı 4,5–6 ve 7'ye karşı 2), kör denetimde
+        doğruluk eşit; küçük bir C# kütüphanesinde daha dar kapsadı. Büyük bir kod
+        tabanının %1–2'sini okur ve bunu söyler.</p>
+        <p class="links">depo henüz herkese açık değil</p>
       </article>
 
     </div>
@@ -583,6 +646,12 @@ lang: en
       Birincisi kendi kabul kriteriyle İskele'ye gider; ikincisi iç döngüye
       girer — katmanlanması gerekiyorsa Mizan'a girdi, soru <em>kullanıcılar
       bunu neden yapıyor</em> ise Kıyas'a brief olarak.</li>
+      <li><strong>Röntgen → İskele ve Mizan.</strong> Röntgen var olan bir kod
+      tabanı için bir giriştir: <code>devir.py</code> ölçümünü kabul kriterli ve
+      gözden geçirme taban çizgili İskele backlog görevlerine, ikinci okuyucusunun
+      kabul etmediği cümleleri de hakemi atıf yapılan satır olan post-hoc Mizan
+      kayıtlarına çevirir. Yukarıdaki çizimde henüz yok: çizim yayımlanmış dört
+      skill'i gösterir.</li>
     </ul>
   </div>
 </section>
@@ -590,7 +659,11 @@ lang: en
 <section class="block">
   <div class="wrap">
     <h2>Ortak sabitler</h2>
-    <p class="sub">Dördünde de aynı birkaç kural — ve onları bir arada tutan şey.</p>
+    <p class="sub">Dördünde de aynı birkaç kural — ve onları bir arada tutan şey.
+    Henüz taslak olan Röntgen katmanları (<code>[K]</code>/<code>[H]</code>), adı
+    konmuş bir hakemi (ikinci okuyucu), betikle taşınan kuralları ve CI'da önkayıtlı
+    bir token bütçesini taşır; kendi registry'si olmadığı için yalnız-ekleme ve
+    maliyet kaydı onun için iddia edilmez.</p>
     <div class="tablewrap">
       <table>
         <thead><tr><th>Sabit</th><th>Ne demek</th></tr></thead>
@@ -755,6 +828,14 @@ lang: en
             doğrulanmış bulgu düzeltme görevine, ölçülmemiş bulgu ölçüm görevine
             dönüşür · lostness görevi ilk başarı ekranında bitirir · boş bir
             tarama temiz bir uygulama gibi okunmak yerine çıkış 2 verir</td>
+          </tr>
+          <tr>
+            <td>Röntgen</td>
+            <td><strong>taslak 0.6</strong></td>
+            <td>Yayımlanmadı. Paket bildirimleri (Cargo, npm, .NET, Python, Go,
+            Maven, Gradle) ve Rust, Go, Java/Kotlin ile projenin kendi tanımladığı bir
+            dil için modüller · teslim kapısı olarak ikinci okuyucu · oturum günlüğü ·
+            Türkçe ya da İngilizce rapor</td>
           </tr>
         </tbody>
       </table>

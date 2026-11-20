@@ -2,9 +2,9 @@
 
 The family's entry page: **[xinmurat.github.io](https://xinmurat.github.io/)**
 
-Canonical description of four Claude skills that keep each other honest —
+Canonical description of five Claude skills that keep each other honest —
 **İskele builds · Mizan weighs · Kıyas generates · ux-mizan measures
-experience** — plus the handoff chain between them and the constants they
+experience · Röntgen maps** — plus the handoff chain between them and the constants they
 share.
 
 The four repositories link here rather than each carrying its own copy of the
@@ -29,6 +29,7 @@ to override. The language toggle defaults to English, remembers a choice in
 | Mizan | weighs | [Mizan](https://github.com/XINMurat/Mizan) | [docs](https://xinmurat.github.io/Mizan/) |
 | Kıyas | generates | [Kiyas](https://github.com/XINMurat/Kiyas) | [docs](https://xinmurat.github.io/Kiyas/) |
 | ux-mizan | measures experience | [ux-mizan](https://github.com/XINMurat/ux-mizan) | [docs](https://xinmurat.github.io/ux-mizan/) |
+| Röntgen | maps | not yet public (draft 0.6) | — |
 
 The **Current releases** table in `index.md` is typed by hand, so CI checks it:
 `tools/check_releases.py` compares every row that links to `/releases/latest`
