@@ -132,7 +132,7 @@ lang: en
     <p class="sub">The tools hand each other files, not prose.</p>
 
     <figure class="chain">
-      <svg viewBox="0 0 850 300" role="img" aria-label="Material enters at Mizan — a document or a chat, a repo or legacy code, a project already running, or the output of an earlier Mizan mode — and it can enter at any turn, not only at the start. Mizan and Kıyas exchange in both directions: gaps and refuted patterns go to Kıyas, seeds come back as preregistered hypotheses. That pair can run on its own. When something survives and is worth building, İskele takes it, and İskele's acceptance criteria return to Mizan as entries. ux-mizan hands measured findings both into the backlog and back into the audit.">
+      <svg viewBox="0 0 850 300" role="img" aria-label="Material enters at Mizan — a document or a chat, a repo or legacy code, a project already running, or the output of an earlier Mizan mode — and it can enter at any turn, not only at the start. Mizan and Kıyas exchange in both directions: gaps and refuted patterns go to Kıyas, seeds come back as preregistered hypotheses. That pair can run on its own. When something survives and is worth building, İskele takes it, and İskele's acceptance criteria return to Mizan as entries. ux-mizan hands measured findings both into the backlog and back into the audit. Röntgen takes an existing codebase from the same input and hands its measurement to İskele as tasks with a review baseline, and the claims its second reader did not accept to Mizan.">
         <defs>
           <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
             <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
@@ -145,6 +145,20 @@ lang: en
           <text class="chain-in" x="98" y="55" text-anchor="middle">a repo, legacy code,</text>
           <text class="chain-in" x="98" y="72" text-anchor="middle">a running project,</text>
           <text class="chain-in" x="98" y="89" text-anchor="middle">an earlier mode&#39;s output</text>
+        </g>
+        <g class="chain-rontgen">
+          <g fill="none" stroke="currentColor" stroke-width="1.4" opacity=".55" marker-end="url(#ar)">
+            <path d="M83,104 V176"/>
+            <path d="M160,220 H383"/>
+            <path d="M130,176 V125 H280 V90"/>
+          </g>
+          <rect x="6" y="176" width="154" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
+          <text class="chain-node" x="83" y="209" text-anchor="middle">Röntgen</text>
+          <g class="chain-txt">
+            <text x="91" y="150">a codebase</text>
+            <text x="270" y="238" text-anchor="middle">tasks · baseline</text>
+            <text x="140" y="118">unheld claims</text>
+          </g>
         </g>
         <g transform="translate(70,0)">
           <g fill="none" stroke="currentColor" stroke-width="1.4" opacity=".55" marker-end="url(#ar)">
@@ -224,8 +238,7 @@ lang: en
       existing codebase: <code>devir.py</code> turns its measurement into İskele
       backlog tasks with acceptance criteria and a review baseline, and the
       sentences its second reader did not accept into post-hoc Mizan entries whose
-      arbiter is the cited line. Not drawn above yet: the diagram shows the four
-      released skills.</li>
+      arbiter is the cited line.</li>
     </ul>
   </div>
 </section>
@@ -561,7 +574,7 @@ lang: en
     <p class="sub">Araçlar birbirine dosya devreder, düzyazı değil.</p>
 
     <figure class="chain">
-      <svg viewBox="0 0 850 300" role="img" aria-label="Malzeme Mizan'a girer — bir doküman ya da sohbet, bir repo ya da legacy kod, hâlihazırda süren bir proje, ya da daha önceki bir Mizan modunun çıktısı — ve yalnızca başta değil, her turda girebilir. Mizan ile Kıyas iki yönde alışveriş eder: boşluklar ve çürütülenler Kıyas'a gider, tohumlar önkayıtlı hipotez olarak geri döner. Bu çift kendi başına dönebilir. Sağ kalan bir şey inşa edilmeye değdiğinde İskele devreye girer ve kabul kriterleri Mizan'a girdi olarak döner. ux-mizan ölçülmüş bulguları hem backlog'a hem denetime verir.">
+      <svg viewBox="0 0 850 300" role="img" aria-label="Malzeme Mizan'a girer — bir doküman ya da sohbet, bir repo ya da legacy kod, hâlihazırda süren bir proje, ya da daha önceki bir Mizan modunun çıktısı — ve yalnızca başta değil, her turda girebilir. Mizan ile Kıyas iki yönde alışveriş eder: boşluklar ve çürütülenler Kıyas'a gider, tohumlar önkayıtlı hipotez olarak geri döner. Bu çift kendi başına dönebilir. Sağ kalan bir şey inşa edilmeye değdiğinde İskele devreye girer ve kabul kriterleri Mizan'a girdi olarak döner. ux-mizan ölçülmüş bulguları hem backlog'a hem denetime verir. Röntgen aynı girişten var olan bir kod tabanını alır; ölçümünü gözden geçirme taban çizgili görevler olarak İskele'ye, ikinci okuyucusunun kabul etmediği iddiaları Mizan'a devreder.">
         <defs>
           <marker id="ar-tr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
             <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
@@ -574,6 +587,20 @@ lang: en
           <text class="chain-in" x="98" y="55" text-anchor="middle">repo, legacy kod,</text>
           <text class="chain-in" x="98" y="72" text-anchor="middle">süren bir proje,</text>
           <text class="chain-in" x="98" y="89" text-anchor="middle">önceki modun çıktısı</text>
+        </g>
+        <g class="chain-rontgen">
+          <g fill="none" stroke="currentColor" stroke-width="1.4" opacity=".55" marker-end="url(#ar)">
+            <path d="M83,104 V176"/>
+            <path d="M160,220 H383"/>
+            <path d="M130,176 V125 H280 V90"/>
+          </g>
+          <rect x="6" y="176" width="154" height="56" rx="10" fill="none" stroke="currentColor" opacity=".35"/>
+          <text class="chain-node" x="83" y="209" text-anchor="middle">Röntgen</text>
+          <g class="chain-txt">
+            <text x="91" y="150">kod tabanı</text>
+            <text x="270" y="238" text-anchor="middle">görev · taban çizgisi</text>
+            <text x="140" y="118">tutmayan iddia</text>
+          </g>
         </g>
         <g transform="translate(70,0)">
           <g fill="none" stroke="currentColor" stroke-width="1.4" opacity=".55" marker-end="url(#ar-tr)">
@@ -652,8 +679,7 @@ lang: en
       tabanı için bir giriştir: <code>devir.py</code> ölçümünü kabul kriterli ve
       gözden geçirme taban çizgili İskele backlog görevlerine, ikinci okuyucusunun
       kabul etmediği cümleleri de hakemi atıf yapılan satır olan post-hoc Mizan
-      kayıtlarına çevirir. Yukarıdaki çizimde henüz yok: çizim yayımlanmış dört
-      skill'i gösterir.</li>
+      kayıtlarına çevirir.</li>
     </ul>
   </div>
 </section>
