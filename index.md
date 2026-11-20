@@ -102,7 +102,7 @@ lang: en
 
       <article class="card">
         <span class="verb">maps</span>
-        <h3>Röntgen</h3>
+        <h3><a href="https://github.com/XINMurat/rontgen">Röntgen</a></h3>
         <p>Maps a codebase that already exists and writes the documents that make
         it understandable — reading order, architecture, module notes, flows,
         glossary, risks — with <strong>every sentence tied to a source
@@ -118,7 +118,8 @@ lang: en
         document (11.5 vs 4.5–6 and 7 vs 2 of 14 points) at equal accuracy in
         blind checks; on a small C# library it covered less. It reads 1–2% of a
         large codebase and says so.</p>
-        <p class="links">repository not yet public</p>
+        <p class="links"><a href="https://xinmurat.github.io/rontgen/">docs</a> ·
+        <a href="https://github.com/XINMurat/rontgen">repository</a></p>
       </article>
 
     </div>
@@ -530,7 +531,7 @@ lang: en
 
       <article class="card">
         <span class="verb">haritalar</span>
-        <h3>Röntgen</h3>
+        <h3><a href="https://github.com/XINMurat/rontgen">Röntgen</a></h3>
         <p>Var olan bir kod tabanının haritasını çıkarır ve onu anlaşılır kılan
         belgeleri yazar — okuma sırası, mimari, modül notları, akışlar, sözlük,
         riskler — <strong>her cümle bir kaynak satırına bağlı</strong>. Okumadan
@@ -546,7 +547,8 @@ lang: en
         kapsadı (14 maddeden 11,5'e karşı 4,5–6 ve 7'ye karşı 2), kör denetimde
         doğruluk eşit; küçük bir C# kütüphanesinde daha dar kapsadı. Büyük bir kod
         tabanının %1–2'sini okur ve bunu söyler.</p>
-        <p class="links">depo henüz herkese açık değil</p>
+        <p class="links"><a href="https://xinmurat.github.io/rontgen/">doküman</a> ·
+        <a href="https://github.com/XINMurat/rontgen">depo</a></p>
       </article>
 
     </div>

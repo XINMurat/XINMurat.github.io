@@ -29,7 +29,7 @@ to override. The language toggle defaults to English, remembers a choice in
 | Mizan | weighs | [Mizan](https://github.com/XINMurat/Mizan) | [docs](https://xinmurat.github.io/Mizan/) |
 | Kıyas | generates | [Kiyas](https://github.com/XINMurat/Kiyas) | [docs](https://xinmurat.github.io/Kiyas/) |
 | ux-mizan | measures experience | [ux-mizan](https://github.com/XINMurat/ux-mizan) | [docs](https://xinmurat.github.io/ux-mizan/) |
-| Röntgen | maps | not yet public (draft 0.6) | — |
+| Röntgen | maps | [rontgen](https://github.com/XINMurat/rontgen) (draft 0.6, unreleased) | [docs](https://xinmurat.github.io/rontgen/) |
 
 The **Current releases** table in `index.md` is typed by hand, so CI checks it:
 `tools/check_releases.py` compares every row that links to `/releases/latest`
