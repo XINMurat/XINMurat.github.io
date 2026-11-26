@@ -135,6 +135,13 @@ lang: en
     </ul>
     <p>That is the handoff the family is built for: a measurement turned into a
     claim the next piece of evidence can refute.</p>
+    <p>The map also came back into the tool. The charts drawn for this release
+    (block diagram, links in and out, where the lines are, most-used files) are
+    now a Röntgen output for any repository: <code>pano.py</code> writes one
+    <code>pano.html</code> with no network, its data inside, a TR / EN switch,
+    and a first view in the report's language. Its first version drew nothing
+    where scripts do not run, which the person reading found by opening it;
+    headings and the summary are now written into the page itself.</p>
   </div>
 </section>
 
@@ -283,6 +290,13 @@ lang: en
     </ul>
     <p>Ailenin kurulduğu devir bu: bir ölçüm, bir sonraki kanıtın
     çürütebileceği bir iddiaya dönüştü.</p>
+    <p>Harita araca da geri döndü. Bu yayın için çizilen grafikler (blok
+    şeması, gelen/giden bağlar, satırların yeri, en çok kullanılan dosyalar)
+    artık her depo için bir Röntgen çıktısı: <code>pano.py</code> ağ
+    gerektirmeyen, verisini içinde taşıyan, TR / EN düğmeli ve ilk görünümü
+    rapor dilinde olan tek bir <code>pano.html</code> yazar. İlk sürümü betik
+    çalışmayan görüntüleyicide hiçbir şey göstermiyordu; okuyan kişi açınca
+    fark etti. Başlıklar ve özet artık sayfanın içine yazılıyor.</p>
   </div>
 </section>
 
