@@ -348,6 +348,11 @@ lang: en
     Five seeds, three independent bets, one escape turned into the version stamp
     now in this page's footer — and a closing section on what a single session
     cannot show.</p>
+    <p><a href="/case-study-lean.html"><strong>Second case: a 175,187-file Lean proof →</strong></a>
+    Röntgen on the Lean source of a claimed proof of the Riemann Hypothesis: four
+    scans, each exposing a bug in the tool through its own unresolved count; two
+    wrong guesses reversed; the map handed to a research project as a
+    preregistered test. It does not assess the proof.</p>
   </div>
 </section>
 
@@ -791,6 +796,11 @@ lang: en
     Beş tohum, üç bağımsız bahis, bu sayfanın altbilgisindeki sürüm damgasına
     dönüşmüş bir kaçak — ve tek bir oturumun neyi gösteremeyeceğine dair bir
     kapanış bölümü.</p>
+    <p><a href="/case-study-lean.html#tr"><strong>İkinci vaka: 175.187 dosyalık bir Lean ispatı →</strong></a>
+    Röntgen, Riemann Hipotezi'nin iddia edilen bir ispatının Lean kaynağında:
+    dört tarama, her biri kendi çözülemeyen sayısıyla araçta bir hata açığa
+    çıkarıyor; geri alınan iki yanlış tahmin; bir araştırma projesine ön kayıt
+    sınaması olarak devredilen harita. İspatı değerlendirmez.</p>
   </div>
 </section>
 
