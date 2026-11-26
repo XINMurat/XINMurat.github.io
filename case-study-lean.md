@@ -103,7 +103,8 @@ lang: en
     <p>Not every error was the tool's. Two were the assistant's, made in
     conversation before the evidence was in.</p>
     <div class="tablewrap">
-      <table>
+      <table class="prose">
+        <colgroup><col style="width:42%"><col></colgroup>
         <thead><tr><th>Said first</th><th>What replaced it</th></tr></thead>
         <tbody>
           <tr><td>"There is no written exposition of the proof; only the code exists."</td>
@@ -258,7 +259,8 @@ lang: en
     <p>Hataların hepsi aracın değildi. İkisi asistanındı; kanıt gelmeden,
     sohbette yapılmıştı.</p>
     <div class="tablewrap">
-      <table>
+      <table class="prose">
+        <colgroup><col style="width:42%"><col></colgroup>
         <thead><tr><th>Önce söylenen</th><th>Yerine geçen</th></tr></thead>
         <tbody>
           <tr><td>"İspatın yazılı bir anlatımı yok; yalnızca kod var."</td>

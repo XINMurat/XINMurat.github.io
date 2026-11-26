@@ -142,6 +142,9 @@ thead th{font-family:var(--mono); font-size:.74rem; letter-spacing:.06em;
   border-bottom:1px solid var(--line)}
 tbody tr:last-child td{border-bottom:0}
 td:first-child{white-space:nowrap}
+/* a table of sentences, not labels: the first column wraps (case-study-lean, "Two wrong guesses") */
+table.prose td:first-child{white-space:normal}
+table.prose td{vertical-align:top}
 td strong{font-weight:620}
 
 /* ---------- lists ---------- */
